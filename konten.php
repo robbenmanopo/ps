@@ -11,7 +11,19 @@ $halaman=[
     "santri_update",
     "santri_delete",
     //menu siswa
-    "siswa_tampil"
+    "siswa_tampil",
+    "siswa_tambah",
+    "siswa_insert",
+    "siswa_edit",
+    "siswa_update",
+    "siswa_delete",
+    //menu kelas
+    "kelas_tampil",
+    "kelas_tambah",
+    "kelas_insert",
+    "kelas_edit",
+    "kelas_update",
+    "kelas_delete"
 ];
 if(isset($_GET['hal'])) $hal = $_GET['hal'];
 else $hal = "dashboard";

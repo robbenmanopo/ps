@@ -13,7 +13,7 @@
           <li><a href="?hal=dashboard"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
         <li><a href="?hal=profil"><i class="fa fa-building"></i> <span>Profil Pesantren</span></a></li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-bookmark"></i> <span>Master Data</span>
+          <a href="#"><i class="fa fa-bookmark"></i> <span>Master Data Santri</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -23,6 +23,17 @@
             <li><a href="?hal=asrama_tampil"><i class="fa fa-building"></i> Data Asrama</a></li>
           </ul>
         </li>
+          <li class="treeview">
+              <a href="#"><i class="fa fa-bookmark"></i> <span>Master Data Siswa</span>
+                  <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+              </a>
+              <ul class="treeview-menu">
+                  <li><a href="?hal=siswa_tampil"><i class="fa fa-users"></i> Data Siswa</a></li>
+                  <li><a href="?hal=kelas_tampil"><i class="fa fa-building"></i> Data Kelas</a></li>
+              </ul>
+          </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

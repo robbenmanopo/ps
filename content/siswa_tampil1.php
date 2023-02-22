@@ -1,20 +1,16 @@
-<!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1>
-        Data Siswa
-       <!--<small>advanced tables</small>-->
-    </h1>
+    <h1>Data Santri</h1>
 </section>
 
 <!-- Main content -->
 <section class="content">
     <div class="row">
         <div class="col-xs-12">
-
             <div class="box">
                 <div class="box-header">
-                    <a class="btn btn-md btn-primary" href="?hal=siswa_tambah">Tambah</a>
                     <!--<h3 class="box-title">Data Table With Full Features</h3>-->
+                    <a class="btn btn-md btn-info"
+                       href="?hal=santri_tambah"> Tambah Santri </a>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -22,47 +18,46 @@
                         <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nis</th>
-                            <th>Nama</th>
+                            <th>NIS</th>
+                            <th>Nama Santri</th>
                             <th>Jenis Kelamin</th>
-                            <th>Kelas</th>
+                            <th>Asrama</th>
                             <th>Aksi</th>
                         </tr>
                         </thead>
                         <tbody>
 <?php
-$tampil = "SElECT * FROM view_siswa";
+$tampil = "SElECT * FROM view_santri";
 $query = mysqli_query($con,$tampil);
 $no=0;
 while ($data = mysqli_fetch_array($query)) {
 //        var_dump($data);
 $no++;
 ?>
-
                         <tr>
                             <td><?= $no; ?></td>
                             <td><?= $data['nis']; ?></td>
-                            <td><?= $data['nama']; ?></td>
+                            <td><?= $data['nama_santri']; ?></td>
                             <td><?= $data['jk']; ?></td>
-                            <td><?= $data['nama_kelas']; ?></td>
+                            <td><?= $data['nama_asrama']; ?></td>
                             <td>
                                 <!-- Modifikasi tombol edit dan hapus-->
                                 <a class="btn btn-sm btn-warning"
-                                   href="?hal=siswa_edit&id=<?= $data['id_siswa'] ?>"> Edit </a>
+                                   href="?hal=santri_edit&id=<?= $data['id_santri'] ?>"> Edit </a>
                                 <a class="btn btn-sm btn-danger"
-                                   href="?hal=siswa_delete&id=<?= $data['id_siswa'] ?>"> Hapus </a>
+                                   href="?hal=santri_delete&id=<?= $data['id_santri'] ?>"> Hapus </a>
                             </td>
                         </tr>
-<?php } ?>
+<?php
+}
+?>
                         </tbody>
+
                     </table>
                 </div>
                 <!-- /.box-body -->
             </div>
             <!-- /.box -->
         </div>
-        <!-- /.col -->
     </div>
-    <!-- /.row -->
 </section>
-<!-- /.content -->

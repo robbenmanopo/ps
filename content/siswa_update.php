@@ -1,5 +1,4 @@
 <?php
-
 //menampung nilai variable $_POST
 $id_siswa = $_POST['id_siswa'];
 $nis = $_POST['nis'];
@@ -15,19 +14,19 @@ jk='$jk',
 id_kelas='$id_kelas'
 WHERE id_siswa='$id_siswa'
       ";
-$query=mysqli_query($koneksi,$q);
+$query=mysqli_query($con,$q);
 
 if ($query){
 // mod : menambah alert jika query berhasil
     echo "<script>
     window.alert('Data berhasil diperbarui');
-    window.location.href='?halsiswa_tampil';
+    window.location.href='?hal=siswa_tampil';
     </script>";
 } else {
 // mod : menambah alert jika query gagal
     echo "<script>
     window.alert('Data gagal diperbarui');
-    window.location.href='?halsiswa_tampil';
+    window.location.href='?hal=siswa_tampil';
     </script>";
 }
 ?>
