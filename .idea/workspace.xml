@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bb0806e-e566-41cb-a7d3-283da765a31b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/content/siswa_tampil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/konten.php" beforeDir="false" afterPath="$PROJECT_DIR$/konten.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parts/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/head.php" afterDir="false" />
-    </list>
+    <list default="true" id="7bb0806e-e566-41cb-a7d3-283da765a31b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677061612862</updated>
       <workItem from="1677061613869" duration="63000" />
-      <workItem from="1677061690737" duration="2267000" />
+      <workItem from="1677061690737" duration="2620000" />
     </task>
     <servers />
   </component>
