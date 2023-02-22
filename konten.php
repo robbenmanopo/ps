@@ -9,7 +9,9 @@ $halaman=[
     "santri_insert",
     "santri_edit",
     "santri_update",
-    "santri_delete"
+    "santri_delete",
+    //menu siswa
+    "siswa_tampil"
 ];
 if(isset($_GET['hal'])) $hal = $_GET['hal'];
 else $hal = "dashboard";
