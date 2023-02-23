@@ -10,7 +10,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>Operator</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
@@ -21,8 +21,8 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">DAFTAR MENU</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Profil Sekolah</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Informasi</span></a></li>
+        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Profil Operator</span></a></li>
+        <li><a href="#"><i class="fa fa-link"></i> <span>Input Nilai</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Master Data</span>
             <span class="pull-right-container">
@@ -30,7 +30,7 @@
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">Data Guru</a></li>
+            <li><a href="#">Data KD</a></li>
             <li><a href="#">Data Siswa</a></li>
           </ul>
         </li>
