@@ -1,62 +1,38 @@
-<!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1>
-        Data Kelas
-        <!--<small>advanced tables</small>-->
-    </h1>
+    <h1>Tambah Data Kelas</h1>
 </section>
-
-<!-- Main content -->
 <section class="content">
     <div class="row">
-        <div class="col-xs-12">
-
-            <div class="box">
-                <div class="box-header">
-                    <a class="btn btn-md btn-primary" href="?hal=kelas_tambah">Tambah</a>
-                    <!--<h3 class="box-title">Data Table With Full Features</h3>-->
+        <!-- left column -->
+        <div class="col-md-6">
+            <!-- gene l form elements -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <!--  <h3 class="box-title">Quick Example</h3>-->
                 </div>
                 <!-- /.box-header -->
-                <div class="box-body">
-                    <table id="example1" class="table table-bordered table-striped">
-                        <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Nama Kelas</th>
-                            <th>Aksi</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        $tampil = "SElECT * FROM data_kelas";
-                        $query = mysqli_query($con,$tampil);
-                        $no=0;
-                        while ($data = mysqli_fetch_array($query)) {
-//        var_dump($data);
-                            $no++;
-                            ?>
+                <!-- form start -->
+                <form action="?hal=kelas_insert" method="post" role="form">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label for="nama_kelas">Nama Kelas</label>
+                            <input type="text" class="form-control" name="nama_kelas" id="nama_kelas" placeholder="nama_kelas" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_kelas">Nama Kelas</label>
+                            <input type="text" class="form-control" name="nama_kelas" id="nama_kelas" placeholder="nama_kelas" required>
+                        </div>
+                        <div class="box-footer">
+                            <button type="submit" class="btn btn-sm btn-success">Simpan</button>
+                            <button type="reset" class="btn btn-warning">Reset</button>
+                            <a class="btn btn-sm btn-primary" href="?hal=kelas_tampil">Batal</a>
+                        </div>
+                    </div>
+                </form>
 
-                            <tr>
-                                <td><?= $no; ?></td>
-                                <td><?= $data['nama_kelas']; ?></td>
-                                <td>
-                                    <!-- Modifikasi tombol edit dan hapus-->
-                                    <a class="btn btn-sm btn-warning"
-                                       href="?hal=kelas_edit&id=<?= $data['id_kelas'] ?>"> Edit </a>
-                                    <a class="btn btn-sm btn-danger"
-                                       href="?hal=kelas_delete&id=<?= $data['id_kelas'] ?>"> Hapus </a>
-                                </td>
-                            </tr>
-                        <?php } ?>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- /.box-body -->
+                <!-- /.box -->
             </div>
-            <!-- /.box -->
+            <!--/.col (left) -->
         </div>
-        <!-- /.col -->
-    </div>
-    <!-- /.row -->
 </section>
-<!-- /.content -->
+

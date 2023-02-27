@@ -1,7 +1,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Data Kelas
+        Data Kompetensi Dasar
         <!--<small>advanced tables</small>-->
     </h1>
 </section>
@@ -13,7 +13,7 @@
 
             <div class="box">
                 <div class="box-header">
-                    <a class="btn btn-md btn-primary" href="?hal=kelas_tambah">Tambah</a>
+                    <a class="btn btn-md btn-primary" href="?hal=kd_tambah">Tambah</a>
                     <!--<h3 class="box-title">Data Table With Full Features</h3>-->
                 </div>
                 <!-- /.box-header -->
@@ -22,10 +22,13 @@
                         <thead>
                         <tr>
                             <th>No</th>
+                            <th>Nama Mata Pelajaran</th>
                             <th>Nama Kelas</th>
+                            <th>Kode. KD</th>
+                            <th>Deskripsi. KD</th>
                             <th class="
 <?php
-//fungsi untuk menyembunyikan tombol aksi jika rolenya operator
+//fungsi untuk menyembunyikan tombol aksi jika rolenya selain Admin
 if ($_SESSION['role']==2 or $_SESSION['role']==3){
     echo "hidden";
 }
@@ -35,17 +38,33 @@ if ($_SESSION['role']==2 or $_SESSION['role']==3){
                         </thead>
                         <tbody>
                         <?php
-                        $tampil = "SElECT * FROM data_kelas";
+                        $tampil = "SElECT * FROM view_mapel";
                         $query = mysqli_query($con,$tampil);
                         $no=0;
                         while ($data = mysqli_fetch_array($query)) {
 //        var_dump($data);
                             $no++;
+                        }
                             ?>
 
                             <tr>
                                 <td><?= $no; ?></td>
+                                <td><?= $data['nama_mapel']; ?></td>
                                 <td><?= $data['nama_kelas']; ?></td>
+                        <?php
+                        $tampil1 = "SElECT * FROM view_kd";
+                        $query = mysqli_query($con,$tampil1);
+                        $no=0;
+                        while ($data = mysqli_fetch_array($query)) {
+                            //        var_dump($data);
+                            $no++;
+                        }
+                            ?>
+
+                    <tr>
+                        <td><?= $no; ?></td>
+                        <td><?= $data['kode_kd']; ?></td>
+                        <td><?= $data['deskripsi']; ?></td>
                                 <td class="
 <?php
 //fungsi untuk menyembunyikan tombol aksi jika rolenya operator
@@ -61,7 +80,6 @@ if ($_SESSION['role']==2 or $_SESSION['role']==3){
                                        href="?hal=kelas_delete&id=<?= $data['id_kelas'] ?>"> Hapus </a>
                                 </td>
                             </tr>
-                        <?php } ?>
                         </tbody>
                     </table>
                 </div>
@@ -73,4 +91,5 @@ if ($_SESSION['role']==2 or $_SESSION['role']==3){
     </div>
     <!-- /.row -->
 </section>
+
 <!-- /.content -->

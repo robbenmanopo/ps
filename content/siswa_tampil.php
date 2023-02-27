@@ -25,8 +25,17 @@
                             <th>Nis</th>
                             <th>Nama</th>
                             <th>Jenis Kelamin</th>
-                            <th>Kelas</th>
-                            <th>Aksi</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Alamat</th>
+                            <th>Nama Kelas</th>
+                            <th class="
+<?php
+//fungsi untuk menyembunyikan tombol aksi jika rolenya operator
+if ($_SESSION['role']==2 or $_SESSION['role']==3){
+    echo "hidden";
+}
+?>
+">Aksi</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -42,10 +51,19 @@ $no++;
                         <tr>
                             <td><?= $no; ?></td>
                             <td><?= $data['nis']; ?></td>
-                            <td><?= $data['nama']; ?></td>
+                            <td><?= $data['nama_siswa']; ?></td>
                             <td><?= $data['jk']; ?></td>
+                            <td><?= $data['tgl_lahir']; ?></td>
+                            <td><?= $data['alamat']; ?></td>
                             <td><?= $data['nama_kelas']; ?></td>
-                            <td>
+                            <td class="
+<?php
+//fungsi untuk menyembunyikan tombol aksi jika rolenya operator
+if ($_SESSION['role']==2 or $_SESSION['role']==3){
+    echo "hidden";
+}
+?>
+">
                                 <!-- Modifikasi tombol edit dan hapus-->
                                 <a class="btn btn-sm btn-warning"
                                    href="?hal=siswa_edit&id=<?= $data['id_siswa'] ?>"> Edit </a>

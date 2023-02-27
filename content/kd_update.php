@@ -1,27 +1,24 @@
-
 <?php
-//print_r($_POST);
-include "library/config.php";
 //menampung nilai variable $_POST
-$nama_kelas = $_POST['nama_kelas'];
-
+$id_kd = $_POST['id_kd'];
+$nama_kd = $_POST['nama_kd'];
 //memasukkan data ke dalam database
-$q="INSERT INTO data_kelas SET
-nama_kelas='$nama_kelas'";
-
+$q="UPDATE data_kelas SET
+nama_kelas='$nama_kelas',
+WHERE id_kelas='$id_kelas'
+      ";
 $query=mysqli_query($con,$q);
 
-//aksi jika query sukses maupun gagal
 if ($query){
-    //mod : menambah action alert jika query berhasil
+// mod : menambah alert jika query berhasil
     echo "<script>
     window.alert('Alhamdulillah, Data siswa berhasil ditambah');
     window.location.href='?hal=kelas_tampil';
     </script>";
 } else {
-//mod : menambah action alert jika query berhasil
+// mod : menambah alert jika query gagal
     echo "<script>
-    window.alert('Data kelas gagal ditambah');
+    window.alert('Maaf, Data gagal diperbarui');
     window.location.href='?hal=kelas_tampil';
     </script>";
 }

@@ -1,71 +1,32 @@
 <?php
-//mengambil data siswa dari database
+//mengambil data mapel dari database
 $query = mysqli_query($con,
-    "SELECT * FROM view_siswa WHERE id_siswa='$_GET[id]'");
+    "SELECT * FROM view_mapel WHERE id_mapel='$_GET[id]'");
 $data = mysqli_fetch_array($query);
 ?>
 
-<!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1>
-        Edit Data Siswa
-        <!--<small>advanced tables</small>-->
-    </h1>
+    <h1>Edit Data Mata Pelajaran</h1>
 </section>
-
-<!-- Main content -->
 <section class="content">
     <div class="row">
-        <div class="col-xs-6">
-            <!-- general form elements -->
+        <!-- left column -->
+        <div class="col-md-6">
+            <!-- gene l form elements -->
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <!--<h3 class="box-title">Data Siswa</h3>-->
+                    <!--  <h3 class="box-title">Quick Example</h3>-->
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" action="?hal=siswa_update" method="post">
+                <form action="?hal=mapel_update" method="post" role="form">
                     <div class="box-body">
-
-                        <!-- Input nis -->
                         <div class="form-group">
-                            <input type="hidden" name="id_siswa" value="<?= $data['id_siswa'] ?>">
-                            <label for="nis">No. Induk Siswa</label>
-                            <input type="text" name="nis" class="form-control" id="nis" placeholder="No. Induk Siswa"  value="<?= $data['nis'] ?>" required>
+                            <label for="nama_mapel">Nama Mata Pelajaran</label>
+                            <input type="text" class="form-control" name="nama_mapel" id="nama_mapel" placeholder="Mata Pelajaran" value="<?= $data['nama_mapel'] ?>" required>
                         </div>
-
-                        <!-- Input nama-->
                         <div class="form-group">
-                            <label for="nama">Nama</label>
-                            <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama" value="<?= $data['nama'] ?>" required>
-                        </div>
-
-                        <!-- Input jk -->
-                        <div class="form-group">
-                            <label for="jk">Jenis Kelamin</label>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="jk" id="jk" value="L" required
-                                        <?php
-                                        if ($data['jk']=="L"){echo "checked";}
-                                        ?>
-                                    > Laki-laki
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="jk" id="jk" value="P"
-                                        <?php
-                                        if ($data['jk']=="P"){echo "checked";}
-                                        ?>
-                                    > Perempuan
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Input kelas -->
-                        <div class="form-group">
-                            <label for="id_kelas">Kelas</label>
+                            <label for="id_kelas">Nama Kelas</label>
                             <select class="form-control" name="id_kelas" id="id_kelas" required>
                                 <option value=""> - Pilih Kelas - </option>
                                 <?php
@@ -80,18 +41,17 @@ $data = mysqli_fetch_array($query);
                                 ?>
                             </select>
                         </div>
-                    </div>
-                    <!-- /.box-body -->
-
-                    <div class="box-footer">
-                        <button type="submit" class="btn btn-md btn-success">Simpan</button>
-                        <button type="reset" class="btn btn-md btn-warning">Reset</button>
-                        <a  class="btn btn-md btn-danger" href="?hal=siswa_tampil">Batal</a>
+                        <div class="box-footer">
+                            <button type="submit" class="btn btn-sm btn-success">Simpan</button>
+                            <button type="reset" class="btn btn-sm btn-warning">Reset</button>
+                            <a class="btn btn-sm btn-primary" href="?hal=mapel_tampil">Batal</a>
+                        </div>
                     </div>
                 </form>
+
+                <!-- /.box -->
             </div>
-            <!-- /.box -->
+            <!--/.col (left) -->
         </div>
-    </div>
 </section>
 

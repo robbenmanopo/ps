@@ -3,13 +3,6 @@ if(!defined('INDEX')) die("");
 
 $halaman=[
     "dashboard",
-    //menu santri
-    "santri_tampil",
-    "santri_tambah",
-    "santri_insert",
-    "santri_edit",
-    "santri_update",
-    "santri_delete",
     //menu siswa
     "siswa_tampil",
     "siswa_tambah",
@@ -17,6 +10,27 @@ $halaman=[
     "siswa_edit",
     "siswa_update",
     "siswa_delete",
+    //menu mapel
+    "mapel_tampil",
+    "mapel_tambah",
+    "mapel_insert",
+    "mapel_edit",
+    "mapel_update",
+    "mapel_delete",
+    //menu kd
+    "kd_tampil",
+    "kd_tambah",
+    "kd_insert",
+    "kd_edit",
+    "kd_update",
+    "kd_delete",
+    //menu guru
+    "guru_tampil",
+    "guru_tambah",
+    "guru_insert",
+    "guru_edit",
+    "guru_update",
+    "guru_delete",
     //menu kelas
     "kelas_tampil",
     "kelas_tambah",
@@ -24,6 +38,20 @@ $halaman=[
     "kelas_edit",
     "kelas_update",
     "kelas_delete",
+    //menu nilai
+    "nilai_tampil",
+    "nilai_tambah",
+    "nilai_insert",
+    "nilai_edit",
+    "nilai_update",
+    "nilai_delete",
+    //menu user
+    "user_tampil",
+    "user_tambah",
+    "user_insert",
+    "user_edit",
+    "user_update",
+    "user_delete",
     //
 ];
 if(isset($_GET['hal'])) $hal = $_GET['hal'];

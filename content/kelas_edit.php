@@ -1,7 +1,7 @@
 <?php
 //mengambil data siswa dari database
 $query = mysqli_query($con,
-    "SELECT * FROM data_kelas WHERE id_siswa='$_GET[id]'");
+    "SELECT * FROM data_kelas WHERE id_kelas='$_GET[id]'");
 $data = mysqli_fetch_array($query);
 ?>
 

@@ -61,6 +61,20 @@ $data = mysqli_fetch_array($query);
                                     > Perempuan
                                 </label>
                             </div>
+                            <div class="form-group">
+                                <label for="tgl_lahir">Tanggal Lahir</label>
+                                <input type="date" class="form-control"
+                                       name="tgl_lahir"
+                                       id="tgl_lahir"
+                                       placeholder="Tanggal Lahir" value="<?= $data['tgl_lahir'] ?>" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="alamat">Alamat</label>
+                                <input type="text" class="form-control"
+                                       name="alamat"
+                                       id="alamat"
+                                       placeholder="Alamat" value="<?= $data['alamat'] ?>" required>
+                            </div>
                         </div>
 
                         <!-- Input kelas -->

@@ -1,62 +1,46 @@
-<!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1>
-        Data Kelas
-        <!--<small>advanced tables</small>-->
-    </h1>
+    <h1>Tambah Data Mata Pelajaran</h1>
 </section>
-
-<!-- Main content -->
 <section class="content">
     <div class="row">
-        <div class="col-xs-12">
-
-            <div class="box">
-                <div class="box-header">
-                    <a class="btn btn-md btn-primary" href="?hal=kelas_tambah">Tambah</a>
-                    <!--<h3 class="box-title">Data Table With Full Features</h3>-->
+        <!-- left column -->
+        <div class="col-md-6">
+            <!-- gene l form elements -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <!--  <h3 class="box-title">Quick Example</h3>-->
                 </div>
                 <!-- /.box-header -->
-                <div class="box-body">
-                    <table id="example1" class="table table-bordered table-striped">
-                        <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Nama Kelas</th>
-                            <th>Aksi</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        $tampil = "SElECT * FROM view_siswa";
-                        $query = mysqli_query($con,$tampil);
-                        $no=0;
-                        while ($data = mysqli_fetch_array($query)) {
-//        var_dump($data);
-                            $no++;
-                            ?>
+                <!-- form start -->
+                <form action="?hal=mapel_insert" method="post" role="form">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label for="nama_mapel">Nama Mata Pelajaran</label>
+                            <input type="text" class="form-control" name="nama_mapel" id="nama_mapel" placeholder="Mata Pelajaran" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_kelas">Nama Kelas</label>
+                            <select class="form-control" name="id_kelas" id="id_kelas" required>
+                                <option value=""> - Pilih Kelas - </option>
+                                <?php
+                                $query_kelas=mysqli_query($con,"SELECT * FROM data_kelas");
+                                while ($j=mysqli_fetch_array($query_kelas)){
+                                    echo "<option value='$j[id_kelas]'> $j[nama_kelas] </option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="box-footer">
+                            <button type="submit" class="btn btn-sm btn-success">Simpan</button>
+                            <button type="reset" class="btn btn-sm btn-warning">Reset</button>
+                            <a class="btn btn-sm btn-primary" href="?hal=mapel_tampil">Batal</a>
+                        </div>
+                    </div>
+                </form>
 
-                            <tr>
-                                <td><?= $no; ?></td>
-                                <td><?= $data['nama_kelas']; ?></td>
-                                <td>
-                                    <!-- Modifikasi tombol edit dan hapus-->
-                                    <a class="btn btn-sm btn-warning"
-                                       href="?hal=siswa_edit&id=<?= $data['id_siswa'] ?>"> Edit </a>
-                                    <a class="btn btn-sm btn-danger"
-                                       href="?hal=siswa_delete&id=<?= $data['id_siswa'] ?>"> Hapus </a>
-                                </td>
-                            </tr>
-                        <?php } ?>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- /.box-body -->
+                <!-- /.box -->
             </div>
-            <!-- /.box -->
+            <!--/.col (left) -->
         </div>
-        <!-- /.col -->
-    </div>
-    <!-- /.row -->
 </section>
-<!-- /.content -->
+

@@ -5,6 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bb0806e-e566-41cb-a7d3-283da765a31b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/content/guru_delete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/guru_edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/guru_insert.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/guru_tambah.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/guru_tampil.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/guru_update.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/kd_delete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/kd_edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/kd_insert.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/kd_tambah.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/kd_tampil.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/kd_update.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parts/dist/css/skins/_all-skins.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/kelas_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/kelas_delete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/kelas_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/kelas_edit.php" afterDir="false" />
@@ -12,7 +25,22 @@
       <change beforePath="$PROJECT_DIR$/content/kelas_tambah.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/kelas_tambah.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/kelas_tampil.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/kelas_tampil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/kelas_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/kelas_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parts/header/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/header/user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/mapel_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/mapel_delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/mapel_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/mapel_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/mapel_insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/mapel_insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/mapel_tambah.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/mapel_tambah.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/mapel_tampil.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/mapel_tampil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/mapel_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/mapel_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/siswa_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/siswa_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/siswa_insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/siswa_insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/siswa_tambah.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/siswa_tambah.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/siswa_tampil.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/siswa_tampil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/siswa_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/siswa_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/konten.php" beforeDir="false" afterPath="$PROJECT_DIR$/konten.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parts/sidebar-left-1.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/sidebar-left-1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parts/sidebar-left-2.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/sidebar-left-2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parts/sidebar-left-3.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/sidebar-left-3.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +101,8 @@
       <workItem from="1677198319804" duration="1714000" />
       <workItem from="1677200698375" duration="4221000" />
       <workItem from="1677285416021" duration="3898000" />
-      <workItem from="1677461592312" duration="10382000" />
+      <workItem from="1677461592312" duration="10442000" />
+      <workItem from="1677482213842" duration="12051000" />
     </task>
     <servers />
   </component>

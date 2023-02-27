@@ -28,15 +28,15 @@
               </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="?hal=siswa_tampil"><i class="fa fa-users"></i> Data kelas</a></li>
-                    <li><a href="?hal=kelas_tampil"><i class="fa fa-building"></i> Data Mata Pelajaran</a></li>
-                    <li><a href="?hal=kelas_tampil"><i class="fa fa-building"></i> Data KD</a></li>
-                    <li><a href="?hal=kelas_tampil"><i class="fa fa-building"></i> Data Guru</a></li>
-                    <li><a href="?hal=kelas_tampil"><i class="fa fa-building"></i> Data Siswa</a></li>
+                    <li><a href="?hal=kelas_tampil"><i class="fa fa-users"></i> Data kelas</a></li>
+                    <li><a href="?hal=mapel_tampil"><i class="fa fa-building"></i> Data Mata Pelajaran</a></li>
+                    <li><a href="?hal=kd_tampil"><i class="fa fa-building"></i> Data KD</a></li>
+                    <li><a href="?hal=guru_tampil"><i class="fa fa-building"></i> Data Guru</a></li>
+                    <li><a href="?hal=siswa_tampil"><i class="fa fa-building"></i> Data Siswa</a></li>
                 </ul>
             </li>
-            <li><a href="?hal=dashboard"><i class="fa fa-building"></i><span>Data Nilai</span></a></li>
-            <li><a href="?hal=dashboard"><i class="fa  fa-user"></i><span>Profil</span></a></li>
+            <li><a href="?hal=nilai_tampil"><i class="fa fa-building"></i><span>Data Nilai</span></a></li>
+            <li><a href="?hal=profil_tampil"><i class="fa  fa-user"></i><span>Profil</span></a></li>
         </ul>
 
       <!-- /.sidebar-menu -->

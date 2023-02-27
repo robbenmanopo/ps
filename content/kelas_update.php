@@ -12,13 +12,13 @@ $query=mysqli_query($con,$q);
 if ($query){
 // mod : menambah alert jika query berhasil
     echo "<script>
-    window.alert('Data berhasil diperbarui');
+    window.alert('Alhamdulillah, Data siswa berhasil ditambah');
     window.location.href='?hal=kelas_tampil';
     </script>";
 } else {
 // mod : menambah alert jika query gagal
     echo "<script>
-    window.alert('Data gagal diperbarui');
+    window.alert('Maaf, Data gagal diperbarui');
     window.location.href='?hal=kelas_tampil';
     </script>";
 }

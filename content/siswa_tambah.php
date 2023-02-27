@@ -1,68 +1,69 @@
-<!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1>
-        Data Siswa
-        <!--<small>advanced tables</small>-->
-    </h1>
+    <h1>Tambah Data Siswa</h1>
 </section>
-
-<!-- Main content -->
 <section class="content">
     <div class="row">
-        <div class="col-xs-12">
-
-            <div class="box">
-                <div class="box-header">
-                    <a class="btn btn-md btn-primary" href="?hal=siswa_tambah">Tambah</a>
-                    <!--<h3 class="box-title">Data Table With Full Features</h3>-->
+        <!-- left column -->
+        <div class="col-md-6">
+            <!-- gene l form elements -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <!--  <h3 class="box-title">Quick Example</h3>-->
                 </div>
                 <!-- /.box-header -->
-                <div class="box-body">
-                    <table id="example1" class="table table-bordered table-striped">
-                        <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Nis</th>
-                            <th>Nama</th>
-                            <th>Jenis Kelamin</th>
-                            <th>Kelas</th>
-                            <th>Aksi</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        $tampil = "SElECT * FROM view_siswa";
-                        $query = mysqli_query($con,$tampil);
-                        $no=0;
-                        while ($data = mysqli_fetch_array($query)) {
-//        var_dump($data);
-                            $no++;
-                            ?>
+                <!-- form start -->
+                <form action="?hal=siswa_insert" method="post" role="form">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label for="nis">No. Induk Siswa</label>
+                            <input type="text" class="form-control"
+                                   name="nis"
+                                   id="nis"
+                            placeholder="No. Induk Santri" required>
+                        </div>
+                        <div class="box-footer">
+                        <div class="form-group">
+                            <label for="nama_kelas">Nama Siswa</label>
+                            <input type="text" class="form-control" name="nama_siswa" id="nama_siswa" placeholder="nama_siswa" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="jk">Jenis Kelamin</label>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="jk" id="jk" value="L" required> Laki-laki
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="jk" id="jk" value="P"> Perempuan
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tgl_lahir">Tanggal Lahir</label>
+                            <input type="date" class="form-control"
+                                   name="tgl_lahir"
+                                   id="tgl_lahir"
+                                   placeholder="Tanggal Lahir" required>
+                        </div>
+                            <div class="form-group">
+                                <label for="alamat">Alamat</label>
+                                <input type="text" class="form-control"
+                                       name="alamat"
+                                       id="alamat"
+                                       placeholder="Alamat" required>
+                            </div>
+                        <div class="box-footer">
+                            <button type="submit" class="btn btn-sm btn-success">Simpan</button>
+                            <button type="reset" class="btn btn-warning">Reset</button>
+                            <a class="btn btn-sm btn-primary" href="?hal=kelas_tampil">Batal</a>
+                        </div>
+                    </div>
+                </form>
 
-                            <tr>
-                                <td><?= $no; ?></td>
-                                <td><?= $data['nis']; ?></td>
-                                <td><?= $data['nama']; ?></td>
-                                <td><?= $data['jk']; ?></td>
-                                <td><?= $data['nama_kelas']; ?></td>
-                                <td>
-                                    <!-- Modifikasi tombol edit dan hapus-->
-                                    <a class="btn btn-sm btn-warning"
-                                       href="?hal=siswa_edit&id=<?= $data['id_siswa'] ?>"> Edit </a>
-                                    <a class="btn btn-sm btn-danger"
-                                       href="?hal=siswa_delete&id=<?= $data['id_siswa'] ?>"> Hapus </a>
-                                </td>
-                            </tr>
-                        <?php } ?>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- /.box-body -->
+                <!-- /.box -->
             </div>
-            <!-- /.box -->
+            <!--/.col (left) -->
         </div>
-        <!-- /.col -->
-    </div>
-    <!-- /.row -->
 </section>
-<!-- /.content -->
+

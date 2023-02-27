@@ -2,20 +2,18 @@
 //print_r($_POST);
 include "library/config.php";
 //menampung nilai variable $_POST
-$nis = $_POST['nis'];
-$nama_siswa = $_POST['nama_siswa'];
+$nama_guru = $_POST['nama_guru'];
+$id_mapel = $_POST['id_mapel'];
 $jk = $_POST['jk'];
-$tgl_lahir = $_POST['tgl_lahir'];
-$alamat = $_POST['alamat'];
+$username = $_POST['username'];
 $id_kelas = $_POST['id_kelas'];
 
 //memasukkan data ke dalam database
-$q="INSERT INTO data_siswa SET
-nis='$nis',
-nama='$nama',
+$q="INSERT INTO data_guru SET
+nama_guru='$nama_guru',
+id_mapel='$id_mapel',
 jk='$jk',
-tgl_lahir='$tgl_lahir',
-alamat='$alamat',
+username='$username',
 id_kelas='$id_kelas'";
 
 $query=mysqli_query($con,$q);
@@ -24,14 +22,14 @@ $query=mysqli_query($con,$q);
 if ($query){
     //mod : menambah action alert jika query berhasil
     echo "<script>
-    window.alert('Alhamdulillah, Data siswa berhasil ditambah');
-    window.location.href='?hal=siswa_tampil';
+    window.alert('Alhamdulillah, Data Guru berhasil ditambah');
+    window.location.href='?hal=guru_tampil';
     </script>";
 } else {
 //mod : menambah action alert jika query berhasil
     echo "<script>
-    window.alert('Maaf, Data siswa gagal ditambah');
-    window.location.href='?hal=siswa_tampil';
+    window.alert('Maaf, Data guru gagal ditambah');
+    window.location.href='?hal=guru_tampil';
     </script>";
 }
 ?>
