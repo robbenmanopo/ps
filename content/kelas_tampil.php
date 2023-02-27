@@ -28,7 +28,7 @@
                         </thead>
                         <tbody>
                         <?php
-                        $tampil = "SElECT * FROM view_siswa";
+                        $tampil = "SElECT * FROM data_kelas";
                         $query = mysqli_query($con,$tampil);
                         $no=0;
                         while ($data = mysqli_fetch_array($query)) {
@@ -38,16 +38,13 @@
 
                             <tr>
                                 <td><?= $no; ?></td>
-                                <td><?= $data['nis']; ?></td>
-                                <td><?= $data['nama']; ?></td>
-                                <td><?= $data['jk']; ?></td>
                                 <td><?= $data['nama_kelas']; ?></td>
                                 <td>
                                     <!-- Modifikasi tombol edit dan hapus-->
                                     <a class="btn btn-sm btn-warning"
-                                       href="?hal=siswa_edit&id=<?= $data['id_siswa'] ?>"> Edit </a>
+                                       href="?hal=kelas_edit&id=<?= $data['id_kelas'] ?>"> Edit </a>
                                     <a class="btn btn-sm btn-danger"
-                                       href="?hal=siswa_delete&id=<?= $data['id_siswa'] ?>"> Hapus </a>
+                                       href="?hal=kelas_delete&id=<?= $data['id_kelas'] ?>"> Hapus </a>
                                 </td>
                             </tr>
                         <?php } ?>

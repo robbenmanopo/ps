@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7bb0806e-e566-41cb-a7d3-283da765a31b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/kelas_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/kelas_delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/kelas_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/kelas_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/kelas_insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/kelas_insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/kelas_tambah.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/kelas_tambah.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/kelas_tampil.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/kelas_tampil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/kelas_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/kelas_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parts/header/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/header/user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +73,7 @@
       <workItem from="1677198319804" duration="1714000" />
       <workItem from="1677200698375" duration="4221000" />
       <workItem from="1677285416021" duration="3898000" />
-      <workItem from="1677461592312" duration="8303000" />
+      <workItem from="1677461592312" duration="10382000" />
     </task>
     <servers />
   </component>

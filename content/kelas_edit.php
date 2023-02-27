@@ -1,14 +1,14 @@
 <?php
 //mengambil data siswa dari database
 $query = mysqli_query($con,
-    "SELECT * FROM view_siswa WHERE id_siswa='$_GET[id]'");
+    "SELECT * FROM data_kelas WHERE id_siswa='$_GET[id]'");
 $data = mysqli_fetch_array($query);
 ?>
 
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Edit Data Siswa
+        Edit Data Kelas
         <!--<small>advanced tables</small>-->
     </h1>
 </section>
@@ -24,61 +24,13 @@ $data = mysqli_fetch_array($query);
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" action="?hal=siswa_update" method="post">
+                <form role="form" action="?hal=kelas_update" method="post">
                     <div class="box-body">
-
-                        <!-- Input nis -->
-                        <div class="form-group">
-                            <input type="hidden" name="id_siswa" value="<?= $data['id_siswa'] ?>">
-                            <label for="nis">No. Induk Siswa</label>
-                            <input type="text" name="nis" class="form-control" id="nis" placeholder="No. Induk Siswa"  value="<?= $data['nis'] ?>" required>
-                        </div>
 
                         <!-- Input nama-->
                         <div class="form-group">
-                            <label for="nama">Nama</label>
-                            <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama" value="<?= $data['nama'] ?>" required>
-                        </div>
-
-                        <!-- Input jk -->
-                        <div class="form-group">
-                            <label for="jk">Jenis Kelamin</label>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="jk" id="jk" value="L" required
-                                        <?php
-                                        if ($data['jk']=="L"){echo "checked";}
-                                        ?>
-                                    > Laki-laki
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="jk" id="jk" value="P"
-                                        <?php
-                                        if ($data['jk']=="P"){echo "checked";}
-                                        ?>
-                                    > Perempuan
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Input kelas -->
-                        <div class="form-group">
-                            <label for="id_kelas">Kelas</label>
-                            <select class="form-control" name="id_kelas" id="id_kelas" required>
-                                <option value=""> - Pilih Kelas - </option>
-                                <?php
-                                $query_kelas=mysqli_query($con,"SELECT * FROM data_kelas");
-                                while ($j=mysqli_fetch_array($query_kelas)){
-                                    echo "<option value='$j[id_kelas]'";
-                                    if ($j['id_kelas'] == $data['id_kelas'])
-                                        echo "selected";
-
-                                    echo "> $j[nama_kelas] </option>";
-                                }
-                                ?>
-                            </select>
+                            <label for="nama_kelas">Nama Kelas</label>
+                            <input type="text" name="nama_kelas" class="form-control" id="nama_kelas" placeholder="Nama Kelas" value="<?= $data['nama_kelas'] ?>" required>
                         </div>
                     </div>
                     <!-- /.box-body -->
