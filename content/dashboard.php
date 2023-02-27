@@ -1,8 +1,10 @@
 <?php
 if (!defined('INDEX')) die("");
 
-$jml_santri = mysqli_num_rows(mysqli_query($con,"SELECT * FROM data_siswa"));
-$jml_asrama = mysqli_num_rows(mysqli_query($con,"SELECT * FROM data_kelas"));
+$jml_siswa = mysqli_num_rows(mysqli_query($con,"SELECT * FROM data_siswa"));
+$jml_kelas = mysqli_num_rows(mysqli_query($con,"SELECT * FROM data_kelas"));
+$jml_guru = mysqli_num_rows(mysqli_query($con,"SELECT * FROM data_guru"));
+$jml_mapel = mysqli_num_rows(mysqli_query($con,"SELECT * FROM mapel"));
 
 ?>
 
@@ -20,7 +22,7 @@ $jml_asrama = mysqli_num_rows(mysqli_query($con,"SELECT * FROM data_kelas"));
 
                 <div class="info-box-content">
                     <span class="info-box-text">Siswa</span>
-                    <span class="info-box-number"><?= $jml_santri ?></span>
+                    <span class="info-box-number"><?= $jml_siswa ?></span>
                 </div>
                 <!-- /.info-box-content -->
             </div>
@@ -33,7 +35,7 @@ $jml_asrama = mysqli_num_rows(mysqli_query($con,"SELECT * FROM data_kelas"));
 
                 <div class="info-box-content">
                     <span class="info-box-text">Kelas</span>
-                    <span class="info-box-number"><?= $jml_asrama ?></span>
+                    <span class="info-box-number"><?= $jml_kelas ?></span>
                 </div>
                 <!-- /.info-box-content -->
             </div>
@@ -46,7 +48,7 @@ $jml_asrama = mysqli_num_rows(mysqli_query($con,"SELECT * FROM data_kelas"));
 
                 <div class="info-box-content">
                     <span class="info-box-text">Guru</span>
-                    <span class="info-box-number">15</span>
+                    <span class="info-box-number"><?= $jml_guru ?></span>
                 </div>
                 <!-- /.info-box-content -->
             </div>
@@ -59,7 +61,7 @@ $jml_asrama = mysqli_num_rows(mysqli_query($con,"SELECT * FROM data_kelas"));
 
                 <div class="info-box-content">
                     <span class="info-box-text">Mata Pelajaran</span>
-                    <span class="info-box-number">5</span>
+                    <span class="info-box-number"><?= $jml_mapel?></span>
                 </div>
                 <!-- /.info-box-content -->
             </div>
