@@ -23,7 +23,8 @@ $halaman=[
     "kelas_insert",
     "kelas_edit",
     "kelas_update",
-    "kelas_delete"
+    "kelas_delete",
+    //
 ];
 if(isset($_GET['hal'])) $hal = $_GET['hal'];
 else $hal = "dashboard";

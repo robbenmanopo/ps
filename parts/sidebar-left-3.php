@@ -16,24 +16,28 @@
         </div>
       </div>
 
-
-      <!-- Sidebar Menu -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">DAFTAR MENU</li>
-        <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Profil Manager</span></a></li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Master Data</span>
-            <span class="pull-right-container">
+        <!-- Sidebar Menu -->
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="header">DAFTAR MENU</li>
+            <!-- Optionally, you can add icons to the links -->
+            <li><a href="?hal=dashboard"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
+            <li class="treeview">
+                <a href="#"><i class="fa fa-bookmark"></i><span>Master Data</span>
+                    <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#">Rekapitulasi Nilai</a></li>
-            <li><a href="#">Data Siswa</a></li>
-          </ul>
-        </li>
-      </ul>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="?hal=siswa_tampil"><i class="fa fa-users"></i> Data kelas</a></li>
+                    <li><a href="?hal=kelas_tampil"><i class="fa fa-building"></i> Data Mata Pelajaran</a></li>
+                    <li><a href="?hal=kelas_tampil"><i class="fa fa-building"></i> Data KD</a></li>
+                    <li><a href="?hal=kelas_tampil"><i class="fa fa-building"></i> Data Guru</a></li>
+                    <li><a href="?hal=kelas_tampil"><i class="fa fa-building"></i> Data Siswa</a></li>
+                </ul>
+            </li>
+            <li><a href="?hal=dashboard"><i class="fa  fa-user"></i><span>Profil</span></a></li>
+        </ul>
+
       <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

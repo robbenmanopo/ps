@@ -1,7 +1,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Data Siswa
+        Data Kelas
         <!--<small>advanced tables</small>-->
     </h1>
 </section>
@@ -13,7 +13,7 @@
 
             <div class="box">
                 <div class="box-header">
-                    <a class="btn btn-md btn-primary" href="?hal=siswa_tambah">Tambah</a>
+                    <a class="btn btn-md btn-primary" href="?hal=kelas_tambah">Tambah</a>
                     <!--<h3 class="box-title">Data Table With Full Features</h3>-->
                 </div>
                 <!-- /.box-header -->
@@ -22,10 +22,7 @@
                         <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nis</th>
-                            <th>Nama</th>
-                            <th>Jenis Kelamin</th>
-                            <th>Kelas</th>
+                            <th>Nama Kelas</th>
                             <th>Aksi</th>
                         </tr>
                         </thead>
