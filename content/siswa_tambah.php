@@ -53,9 +53,21 @@
                                        id="alamat"
                                        placeholder="Alamat" required>
                             </div>
+                            <div class="form-group">
+                                <label for="id_kelas">Nama Kelas</label>
+                                <select class="form-control" name="id_kelas" id="id_kelas" required>
+                                    <option value=""> - Pilih Kelas - </option>
+                                    <?php
+                                    $query_kelas=mysqli_query($con,"SELECT * FROM data_kelas");
+                                    while ($j=mysqli_fetch_array($query_kelas)){
+                                        echo "<option value='$j[id_kelas]'> $j[nama_kelas] </option>";
+                                    }
+                                    ?>
+                                </select>
+                            </div>
                         <div class="box-footer">
                             <button type="submit" class="btn btn-sm btn-success">Simpan</button>
-                            <button type="reset" class="btn btn-warning">Reset</button>
+                            <button type="reset" class="btn btn-sm btn-warning">Reset</button>
                             <a class="btn btn-sm btn-primary" href="?hal=kelas_tampil">Batal</a>
                         </div>
                     </div>

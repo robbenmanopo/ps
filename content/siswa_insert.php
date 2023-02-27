@@ -1,6 +1,5 @@
 <?php
-//print_r($_POST);
-include "library/config.php";
+
 //menampung nilai variable $_POST
 $nis = $_POST['nis'];
 $nama_siswa = $_POST['nama_siswa'];
@@ -12,7 +11,7 @@ $id_kelas = $_POST['id_kelas'];
 //memasukkan data ke dalam database
 $q="INSERT INTO data_siswa SET
 nis='$nis',
-nama='$nama',
+nama_siswa='$nama_siswa',
 jk='$jk',
 tgl_lahir='$tgl_lahir',
 alamat='$alamat',

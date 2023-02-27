@@ -31,13 +31,13 @@ $data = mysqli_fetch_array($query);
                         <div class="form-group">
                             <input type="hidden" name="id_siswa" value="<?= $data['id_siswa'] ?>">
                             <label for="nis">No. Induk Siswa</label>
-                            <input type="text" name="nis" class="form-control" id="nis" placeholder="No. Induk Siswa"  value="<?= $data['nis'] ?>" required>
+                            <input type="text" name="nis" class="form-control" id="nis" placeholder="No. Induk Siswa"  value="<?= $data['nis'] ?>" readonly required>
                         </div>
 
                         <!-- Input nama-->
                         <div class="form-group">
-                            <label for="nama">Nama</label>
-                            <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama" value="<?= $data['nama'] ?>" required>
+                            <label for="nama_siswa">Nama</label>
+                            <input type="text" name="nama_siswa" class="form-control" id="nama_siswa" placeholder="Nama Siswa" value="<?= $data['nama_siswa'] ?>" required>
                         </div>
 
                         <!-- Input jk -->

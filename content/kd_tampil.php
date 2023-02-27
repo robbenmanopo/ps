@@ -22,8 +22,8 @@
                         <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Mata Pelajaran</th>
-                            <th>Nama Kelas</th>
+                            <th>Mata Pelajaran</th>
+                            <th>Kelas</th>
                             <th>Kode. KD</th>
                             <th>Deskripsi. KD</th>
                             <th class="
@@ -38,33 +38,21 @@ if ($_SESSION['role']==2 or $_SESSION['role']==3){
                         </thead>
                         <tbody>
                         <?php
-                        $tampil = "SElECT * FROM view_mapel";
+                        $tampil = "SElECT * FROM view_kd";
                         $query = mysqli_query($con,$tampil);
                         $no=0;
                         while ($data = mysqli_fetch_array($query)) {
-//        var_dump($data);
+
                             $no++;
-                        }
+
                             ?>
 
                             <tr>
-                                <td><?= $no; ?></td>
-                                <td><?= $data['nama_mapel']; ?></td>
+                                <td><?php echo $no; ?></td>
+                                <td><?php echo $data['nama_mapel']; ?></td>
                                 <td><?= $data['nama_kelas']; ?></td>
-                        <?php
-                        $tampil1 = "SElECT * FROM view_kd";
-                        $query = mysqli_query($con,$tampil1);
-                        $no=0;
-                        while ($data = mysqli_fetch_array($query)) {
-                            //        var_dump($data);
-                            $no++;
-                        }
-                            ?>
-
-                    <tr>
-                        <td><?= $no; ?></td>
-                        <td><?= $data['kode_kd']; ?></td>
-                        <td><?= $data['deskripsi']; ?></td>
+                                <td><?= $data['kode_kd']; ?></td>
+                                <td><?= $data['deskripsi']; ?></td>
                                 <td class="
 <?php
 //fungsi untuk menyembunyikan tombol aksi jika rolenya operator
@@ -75,11 +63,12 @@ if ($_SESSION['role']==2 or $_SESSION['role']==3){
 ">
                                     <!-- Modifikasi tombol edit dan hapus-->
                                     <a class="btn btn-sm btn-warning"
-                                       href="?hal=kelas_edit&id=<?= $data['id_kelas'] ?>"> Edit </a>
+                                       href="?hal=kd_edit&id=<?= $data['id_kd'] ?>"> Edit </a>
                                     <a class="btn btn-sm btn-danger"
-                                       href="?hal=kelas_delete&id=<?= $data['id_kelas'] ?>"> Hapus </a>
+                                       href="?hal=kd_delete&id=<?= $data['id_kd'] ?>"> Hapus </a>
                                 </td>
                             </tr>
+                        <?php } ?>
                         </tbody>
                     </table>
                 </div>

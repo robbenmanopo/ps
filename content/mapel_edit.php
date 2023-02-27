@@ -1,7 +1,7 @@
 <?php
 //mengambil data mapel dari database
 $query = mysqli_query($con,
-    "SELECT * FROM view_mapel WHERE id_mapel='$_GET[id]'");
+    "SELECT * FROM mapel WHERE id_mapel='$_GET[id]'");
 $data = mysqli_fetch_array($query);
 ?>
 

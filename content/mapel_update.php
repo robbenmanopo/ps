@@ -5,7 +5,7 @@ $nama_kelas = $_POST['nama_kelas'];
 $id_kelas = $_POST['id_kelas'];
 
 //memasukkan data ke dalam database
-$q="UPDATE data_kelas SET
+$q="UPDATE mapel SET
 nama_mapel='$nama_mapel',
 id_kelas='$id_kelas'
 WHERE id_mapel='$id_mapel'

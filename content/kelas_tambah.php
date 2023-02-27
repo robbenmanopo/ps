@@ -18,13 +18,9 @@
                             <label for="nama_kelas">Nama Kelas</label>
                             <input type="text" class="form-control" name="nama_kelas" id="nama_kelas" placeholder="nama_kelas" required>
                         </div>
-                        <div class="form-group">
-                            <label for="id_kelas">Nama Kelas</label>
-                            <input type="text" class="form-control" name="nama_kelas" id="nama_kelas" placeholder="nama_kelas" required>
-                        </div>
                         <div class="box-footer">
                             <button type="submit" class="btn btn-sm btn-success">Simpan</button>
-                            <button type="reset" class="btn btn-warning">Reset</button>
+                            <button type="reset" class="btn btn-sm btn-warning">Reset</button>
                             <a class="btn btn-sm btn-primary" href="?hal=kelas_tampil">Batal</a>
                         </div>
                     </div>

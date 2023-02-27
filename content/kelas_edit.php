@@ -38,7 +38,7 @@ $data = mysqli_fetch_array($query);
                     <div class="box-footer">
                         <button type="submit" class="btn btn-md btn-success">Simpan</button>
                         <button type="reset" class="btn btn-md btn-warning">Reset</button>
-                        <a  class="btn btn-md btn-danger" href="?hal=siswa_tampil">Batal</a>
+                        <a  class="btn btn-md btn-danger" href="?hal=kelas_tampil">Batal</a>
                     </div>
                 </form>
             </div>
