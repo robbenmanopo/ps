@@ -28,7 +28,7 @@
                             <th class="
 <?php
 //fungsi untuk menyembunyikan tombol aksi jika rolenya operator
-if ($_SESSION['role']==2 or $_SESSION['role']==3){
+if ($_SESSION['role']==3){
     echo "hidden";
 }
 ?>
@@ -52,7 +52,7 @@ if ($_SESSION['role']==2 or $_SESSION['role']==3){
                                 <td class="
 <?php
 //fungsi untuk menyembunyikan tombol aksi jika rolenya operator
-if ($_SESSION['role']==2 or $_SESSION['role']==3){
+if ($_SESSION['role']==3){
 echo "hidden";
 }
 ?>
