@@ -23,8 +23,8 @@
                         </div>
                         <div class="box-footer">
                         <div class="form-group">
-                            <label for="nama_kelas">Nama Siswa</label>
-                            <input type="text" class="form-control" name="nama_siswa" id="nama_siswa" placeholder="nama_siswa" required>
+                            <label for="nama_siswa">Nama Siswa</label>
+                            <input type="text" class="form-control" name="nama_siswa" id="nama_siswa" placeholder="Nama Siswa" required>
                         </div>
                         <div class="form-group">
                             <label for="jk">Jenis Kelamin</label>

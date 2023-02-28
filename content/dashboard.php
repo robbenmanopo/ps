@@ -5,6 +5,7 @@ $jml_siswa = mysqli_num_rows(mysqli_query($con,"SELECT * FROM data_siswa"));
 $jml_kelas = mysqli_num_rows(mysqli_query($con,"SELECT * FROM data_kelas"));
 $jml_guru = mysqli_num_rows(mysqli_query($con,"SELECT * FROM data_guru"));
 $jml_mapel = mysqli_num_rows(mysqli_query($con,"SELECT * FROM mapel"));
+$jml_kd = mysqli_num_rows(mysqli_query($con,"SELECT * FROM kd"));
 
 ?>
 
@@ -62,6 +63,19 @@ $jml_mapel = mysqli_num_rows(mysqli_query($con,"SELECT * FROM mapel"));
                 <div class="info-box-content">
                     <span class="info-box-text">Mata Pelajaran</span>
                     <span class="info-box-number"><?= $jml_mapel?></span>
+                </div>
+                <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box">
+                <span class="info-box-icon bg-red"><i class="fa fa-pencil-square-o"></i></span>
+
+                <div class="info-box-content">
+                    <span class="info-box-text">Kompetensi Dasar</span>
+                    <span class="info-box-number"><?= $jml_kd?></span>
                 </div>
                 <!-- /.info-box-content -->
             </div>
