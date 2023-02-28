@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bb0806e-e566-41cb-a7d3-283da765a31b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/nilai_tambah.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/nilai_tambah.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/nilai_tampil.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/nilai_tampil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/santri_delete.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/santri_edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/santri_insert.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/santri_tambah.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/santri_tampil.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/santri_update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/siswa_tambah.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/siswa_tambah.php" afterDir="false" />
-    </list>
+    <list default="true" id="7bb0806e-e566-41cb-a7d3-283da765a31b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +68,7 @@
       <workItem from="1677461592312" duration="10442000" />
       <workItem from="1677482213842" duration="12127000" />
       <workItem from="1677502152381" duration="13342000" />
-      <workItem from="1677543720571" duration="7131000" />
+      <workItem from="1677543720571" duration="7760000" />
     </task>
     <servers />
   </component>
