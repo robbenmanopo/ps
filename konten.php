@@ -52,6 +52,9 @@ $halaman=[
     "user_edit",
     "user_update",
     "user_delete",
+    //menu tambahan
+    "nilai_tampil_mapel",
+    "nilai_tampil_kd"
     //
 ];
 if(isset($_GET['hal'])) $hal = $_GET['hal'];

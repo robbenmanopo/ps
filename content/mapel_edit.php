@@ -23,6 +23,7 @@ $data = mysqli_fetch_array($query);
                     <div class="box-body">
                         <div class="form-group">
                             <label for="nama_mapel">Nama Mata Pelajaran</label>
+                            <input type="hidden" name="id_mapel" value="<?= $data['id_mapel'] ?>">
                             <input type="text" class="form-control" name="nama_mapel" id="nama_mapel" placeholder="Mata Pelajaran" value="<?= $data['nama_mapel'] ?>" required>
                         </div>
                         <div class="form-group">

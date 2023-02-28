@@ -1,74 +1,87 @@
+<!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1>Tambah Data Nilai</h1>
+    <h1>
+        Data Siswa
+        <!--<small>advanced tables</small>-->
+    </h1>
 </section>
+
+<!-- Main content -->
 <section class="content">
     <div class="row">
-        <!-- left column -->
-        <div class="col-md-6">
-            <!-- gene l form elements -->
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <!--  <h3 class="box-title">Quick Example</h3>-->
+        <div class="col-xs-12">
+
+            <div class="box">
+                <div class="box-header">
+                    <a class="btn btn-md btn-primary
+<?php
+                    //fungsi untuk menyembunyikan tombol aksi jika rolenya operator
+                    if ($_SESSION['role']==2 or $_SESSION['role']==3){
+                        echo "hidden";
+                    }
+                    ?>
+" href="?hal=siswa_tambah">Tambah</a>
+                    <!--<h3 class="box-title">Data Table With Full Features</h3>-->
                 </div>
                 <!-- /.box-header -->
-                <!-- form start -->
-                <form action="?hal=nilai_insert" method="post" role="form">
-                    <div class="box-body">
-                        <div class="box-footer">
-                            <div class="form-group">
-                                <label for="nama_siswa">Nama Siswa</label>
-                                <input type="text" class="form-control" name="nama_siswa" id="nama_siswa" placeholder="nama_siswa" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="jk">Jenis Kelamin</label>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="jk" id="jk" value="L" required> Laki-laki
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="jk" id="jk" value="P"> Perempuan
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="tgl_lahir">Tanggal Lahir</label>
-                                <input type="date" class="form-control"
-                                       name="tgl_lahir"
-                                       id="tgl_lahir"
-                                       placeholder="Tanggal Lahir" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="alamat">Alamat</label>
-                                <input type="text" class="form-control"
-                                       name="alamat"
-                                       id="alamat"
-                                       placeholder="Alamat" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="id_kelas">Nama Kelas</label>
-                                <select class="form-control" name="id_kelas" id="id_kelas" required>
-                                    <option value=""> - Pilih Kelas - </option>
-                                    <?php
-                                    $query_kelas=mysqli_query($con,"SELECT * FROM data_kelas");
-                                    while ($j=mysqli_fetch_array($query_kelas)){
-                                        echo "<option value='$j[id_kelas]'> $j[nama_kelas] </option>";
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                            <div class="box-footer">
-                                <button type="submit" class="btn btn-sm btn-success">Simpan</button>
-                                <button type="reset" class="btn btn-sm btn-warning">Reset</button>
-                                <a class="btn btn-sm btn-primary" href="?hal=kelas_tampil">Batal</a>
-                            </div>
+                <div class="box-body">
+                    <form action="?hal=nilai_insert" method="post">
+                        <table  class="table">
+                            <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nis</th>
+                                <th>Nama</th>
+                                <th>Nilai Tugas</th>
+                                <th>Nilai Harian</th>
+                                <th>Nilai UTS</th>
+                                <th>Nilai UAS</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                            $tampil = "SElECT * FROM view_siswa WHERE id_kelas=$_GET[id]";
+                            $query = mysqli_query($con,$tampil);
+                            $no=0;
+                            while ($data = mysqli_fetch_array($query)) {
+//        var_dump($data);
+                                $no++;
+                                ?>
+
+                                <tr>
+                                    <td><?= $no; ?></td>
+                                    <td><?= $data['nis']; ?></td>
+                                    <td><?= $data['nama_siswa']; ?></td>
+                                    <td>
+                                        <input type="number" name="n_tugas[]" class="form-control">
+                                    </td>
+                                    <td>
+                                        <input type="number" name="n_harian[]" class="form-control">
+                                    </td>
+                                    <td>
+                                        <input type="number" name="n_uts[]" class="form-control">
+                                    </td>
+                                    <td>
+                                        <input type="number" name="n_uas[]" class="form-control">
+                                    </td>
+
+                                </tr>
+                            <?php } ?>
+                            </tbody>
+                        </table>
+                        <div class="box-footer pull-right">
+                            <button type="submit" class="btn btn-sm btn-success">Simpan</button>
+                            <button type="reset" class="btn btn-sm btn-warning">Reset</button>
+                            <a class="btn btn-sm btn-primary" href="?hal=nilai_tampil_kd">Batal</a>
                         </div>
-                </form>
-
-                <!-- /.box -->
+                    </form>
+                </div>
+                <!-- /.box-body -->
             </div>
-            <!--/.col (left) -->
+            <!-- /.box -->
         </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
 </section>
-
+<!-- /.content -->

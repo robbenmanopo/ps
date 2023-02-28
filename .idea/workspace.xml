@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bb0806e-e566-41cb-a7d3-283da765a31b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/content/nilai_tampil_kd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ceklogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ceklogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/kd_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/kd_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/kd_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/kd_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/kelas_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/kelas_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/mapel_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/mapel_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/nilai_tambah.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/nilai_tambah.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/nilai_tampil.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/nilai_tampil_mapel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/siswa_tambah.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/siswa_tambah.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/siswa_tampil.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/siswa_tampil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/konten.php" beforeDir="false" afterPath="$PROJECT_DIR$/konten.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parts/sidebar-left-1.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/sidebar-left-1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parts/sidebar-left-2.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/sidebar-left-2.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/laragon/www/ps/dist/img",
+    "last_opened_file_path": "C:/laragon/www/ps/content",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -42,10 +55,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\ps\content" />
       <recent name="C:\laragon\www\ps\dist\img" />
       <recent name="C:\laragon\www\ps\landing1" />
       <recent name="C:\laragon\www\ps" />
-      <recent name="C:\laragon\www\ps\content" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\ps\landing1" />
@@ -70,7 +83,8 @@
       <workItem from="1677461592312" duration="10442000" />
       <workItem from="1677482213842" duration="12127000" />
       <workItem from="1677502152381" duration="13342000" />
-      <workItem from="1677543720571" duration="10899000" />
+      <workItem from="1677543720571" duration="11569000" />
+      <workItem from="1677567764332" duration="8753000" />
     </task>
     <servers />
   </component>

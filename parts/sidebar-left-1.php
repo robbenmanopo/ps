@@ -35,7 +35,7 @@
                   <li><a href="?hal=siswa_tampil"><i class="fa fa-building"></i> Data Siswa</a></li>
               </ul>
           </li>
-          <li><a href="?hal=nilai_tampil"><i class="fa fa-building"></i><span>Data Nilai</span></a></li>
+          <li><a href="?hal=nilai_tampil_mapel"><i class="fa fa-building"></i><span>Data Nilai</span></a></li>
           <li><a href="?hal=user_tampil"><i class="fa fa-building"></i><span>Data User</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->

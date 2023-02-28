@@ -17,6 +17,7 @@ if ($jml > 0) {
     $_SESSION['role'] = $data['id_role'];
     $_SESSION['nama_role'] = $data['nama_role'];
     $_SESSION['password'] = $data['password'];
+    $_SESSION['nik'] = $data['nik'];
     header('location: index.php');
 } else {
     echo "<script>

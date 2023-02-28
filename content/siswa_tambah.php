@@ -68,7 +68,7 @@
                         <div class="box-footer">
                             <button type="submit" class="btn btn-sm btn-success">Simpan</button>
                             <button type="reset" class="btn btn-sm btn-warning">Reset</button>
-                            <a class="btn btn-sm btn-primary" href="?hal=kelas_tampil">Batal</a>
+                            <a class="btn btn-sm btn-primary" href="?hal=siswa_tampil">Batal</a>
                         </div>
                     </div>
                 </form>

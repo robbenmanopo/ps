@@ -30,6 +30,7 @@ $data = mysqli_fetch_array($query);
                         <!-- Input nama-->
                         <div class="form-group">
                             <label for="nama_kelas">Nama Kelas</label>
+                            <input type="hidden" name="id_kelas" value="<?= $data['id_kelas'] ?>">
                             <input type="text" name="nama_kelas" class="form-control" id="nama_kelas" placeholder="Nama Kelas" value="<?= $data['nama_kelas'] ?>" required>
                         </div>
                     </div>

@@ -19,11 +19,12 @@ $data = mysqli_fetch_array($query);
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
-                <form action="?hal=kd_insert" method="post" role="form">
+                <form action="?hal=kd_update" method="post" role="form">
                     <div class="box-body">
                         <div class="form-group">
                             <label for="id_mapel">Mata Pelajaran</label>
-                            <select class="form-control" name="id_mapel" id="id_mapel" required>
+                            <input type="hidden" name="id_kd" value="<?= $data['id_kd'] ?>">
+                            <select class="form-control" name="id_mapel" id="id_mapel" disabled required>
                                 <option value=""> - Pilih Mata Pelajaran - </option>
                                 <?php
                                 $query_mapel=mysqli_query($con,"SELECT * FROM view_mapel");
@@ -39,7 +40,7 @@ $data = mysqli_fetch_array($query);
                         </div>
                         <div class="form-group">
                             <label for="kode_kd">Kode. KD</label>
-                            <input type="text" class="form-control" name="kode_kd" id="kode_kd" placeholder="Kode. KD" value="<?= $data['kode_kd'] ?>" required>
+                            <input type="text" class="form-control" name="kode_kd" id="kode_kd" placeholder="Kode. KD" value="<?= $data['kode_kd'] ?>" disabled required>
                         </div>
                         <div class="form-group">
                             <label for="deskripsi">Deskripsi</label>

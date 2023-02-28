@@ -13,7 +13,7 @@
 
             <div class="box">
                 <div class="box-header">
-                    <a class="btn btn-md btn-primary" href="?hal=nilai_tambah">Tambah</a>
+                    <!--<a class="btn btn-md btn-primary" href="?hal=nilai_tambah">Tambah</a>-->
                     <!--<h3 class="box-title">Data Table With Full Features</h3>-->
                 </div>
                 <!-- /.box-header -->
@@ -24,7 +24,6 @@
                             <th>No</th>
                             <th>Mata Pelajaran</th>
                             <th>Kelas</th>
-                            <th>Kompetensi Dasar</th>
                             <th class="
 <?php
 //fungsi untuk menyembunyikan tombol aksi jika rolenya operator
@@ -37,7 +36,7 @@ if ($_SESSION['role']==3){
                         </thead>
                         <tbody>
                         <?php
-                        $tampil = "SElECT * FROM view_nilai";
+                        $tampil = "SElECT * FROM view_mapel_guru WHERE nik='$_SESSION[nik]'";
                         $query = mysqli_query($con,$tampil);
                         $no=0;
                         while ($data = mysqli_fetch_array($query)) {
@@ -47,7 +46,7 @@ if ($_SESSION['role']==3){
 
                             <tr>
                                 <td><?= $no; ?></td>
-                                <td><?= $data['nama_siswa']; ?></td>
+                                <td><?= $data['nama_mapel']; ?></td>
                                 <td><?= $data['nama_kelas']; ?></td>
                                 <td class="
 <?php
@@ -58,10 +57,8 @@ echo "hidden";
 ?>
 ">
                                     <!-- Modifikasi tombol edit dan hapus-->
-                                    <a class="btn btn-sm btn-warning"
-                                       href="?hal=nilai_edit&id=<?= $data['id_siswa'] ?>"> Edit </a>
-                                    <a class="btn btn-sm btn-danger"
-                                       href="?hal=nilai_delete&id=<?= $data['id_siswa'] ?>"> Hapus </a>
+                                    <a class="btn btn-sm btn-success"
+                                       href="?hal=nilai_tampil_kd&id=<?= $data['id_mapel'] ?>">Detail</a>
                                 </td>
                             </tr>
                         <?php } ?>
