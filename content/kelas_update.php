@@ -4,7 +4,7 @@ $id_kelas = $_POST['id_kelas'];
 $nama_kelas = $_POST['nama_kelas'];
 //memasukkan data ke dalam database
 $q="UPDATE data_kelas SET
-nama_kelas='$nama_kelas',
+nama_kelas='$nama_kelas'
 WHERE id_kelas='$id_kelas'
       ";
 $query=mysqli_query($con,$q);

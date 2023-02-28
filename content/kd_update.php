@@ -3,9 +3,9 @@
 $id_kd = $_POST['id_kd'];
 $nama_kd = $_POST['nama_kd'];
 //memasukkan data ke dalam database
-$q="UPDATE data_kelas SET
+$q="UPDATE kd SET
 nama_kelas='$nama_kelas',
-WHERE id_kelas='$id_kelas'
+WHERE id_kd='$id_kd'
       ";
 $query=mysqli_query($con,$q);
 
