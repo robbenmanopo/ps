@@ -23,6 +23,7 @@
                         <tr>
                             <th>No</th>
                             <th>Nama Mata Pelajaran</th>
+                            <th>Kelas</th>
                             <th class="
 <?php
 //fungsi untuk menyembunyikan tombol aksi jika rolenya operator

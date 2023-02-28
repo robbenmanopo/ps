@@ -5,5 +5,5 @@
         @kelompok_satu
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2023 <a href="">SMK BP Subulul Huda</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2023 <a href="http://smkbpsubululhuda.mysch.id/">SMK BP Subulul Huda</a>.</strong> All rights reserved.
 </footer>

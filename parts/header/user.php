@@ -2,17 +2,17 @@
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
-              <img src="dist/img/operator.png" class="user-image" alt="User Image">
+              <img src="dist/img/logo.png" class="user-image" alt="User Image">
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src="dist/img/operator.png" class="img-circle" alt="User Image">
+                <img src="dist/img/logo.png" class="img-circle" alt="User Image">
 
                 <p>
                     <b><?=  ucwords($_SESSION['username']) ?></b> |
                   <?=  ucwords($_SESSION['nama_role']) ?>
-                  <small>Member since Nov. 2023</small>
+                  <small>SMK BP Subulul Huda 2023</small>
                 </p>
               </li>
 
