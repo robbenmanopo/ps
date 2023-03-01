@@ -59,6 +59,8 @@ echo "hidden";
                                     <!-- Modifikasi tombol edit dan hapus-->
                                     <a class="btn btn-sm btn-success"
                                        href="?hal=nilai_tampil_kd&id=<?= $data['id_mapel'] ?>">Detail</a>
+                                    <a class="btn btn-sm btn-warning"
+                                       href="?hal=nilai_tampil_kd&id=<?= $data['id_mapel'] ?>">Lihat Nilai</a>
                                 </td>
                             </tr>
                         <?php } ?>

@@ -20,7 +20,7 @@
                         echo "hidden";
                     }
                     ?>
-" href="?hal=siswa_tambah">Tambah</a>
+" href="?hal=siswa_insert">Tambah</a>
                     <!--<h3 class="box-title">Data Table With Full Features</h3>-->
                 </div>
                 <!-- /.box-header -->
@@ -40,7 +40,7 @@
                             </thead>
                             <tbody>
                             <?php
-                            $tampil = "SElECT * FROM view_siswa WHERE id_kelas=$_GET[id]";
+                            $tampil = "SElECT * FROM view_siswa WHERE id_kelas=$_GET[id_kelas]";
                             $query = mysqli_query($con,$tampil);
                             $no=0;
                             while ($data = mysqli_fetch_array($query)) {
@@ -49,9 +49,14 @@
                                 ?>
 
                                 <tr>
+                                    <input type="hidden" name="id_siswa[]" value="<?= $data['id_siswa'] ?>" >
+                                    <input type="hidden" name="id_mapel[]" value="<?= $_GET['id_mapel'] ?>" >
+                                    <input type="hidden" name="id_kd[]" value="<?= $_GET['id_kd'] ?>" >
                                     <td><?= $no; ?></td>
                                     <td><?= $data['nis']; ?></td>
-                                    <td><?= $data['nama_siswa']; ?></td>
+                                    <td>
+                                        <?= $data['nama_siswa']; ?>
+                                    </td>
                                     <td>
                                         <input type="number" name="n_tugas[]" class="form-control">
                                     </td>
@@ -72,7 +77,7 @@
                         <div class="box-footer pull-right">
                             <button type="submit" class="btn btn-sm btn-success">Simpan</button>
                             <button type="reset" class="btn btn-sm btn-warning">Reset</button>
-                            <a class="btn btn-sm btn-primary" href="?hal=nilai_tampil_kd">Batal</a>
+                            <a class="btn btn-sm btn-primary" href="?hal=nilai_tampil_kd&id=<?= $_GET['id_mapel'] ?>">Batal</a>
                         </div>
                     </form>
                 </div>

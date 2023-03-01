@@ -37,7 +37,7 @@ if ($_SESSION['role']==3){
                         </thead>
                         <tbody>
                         <?php
-                        $tampil = "SElECT * FROM view_kd_input WHERE nik='$_SESSION[nik]'";
+                        $tampil = "SElECT * FROM view_kd_input WHERE id_mapel=$_GET[id]";
                         $query = mysqli_query($con,$tampil);
                         $no=0;
                         while ($data = mysqli_fetch_array($query)) {
@@ -60,11 +60,11 @@ echo "hidden";
 ">
                                     <!-- Modifikasi tombol edit dan hapus-->
                                     <a class="btn btn-sm btn-info"
-                                       href="?hal=nilai_tambah&id=<?= $data['id_kelas'] ?>">Input</a>
+                                       href="?hal=nilai_tambah&id_kelas=<?= $data['id_kelas'] ?>&id_mapel=<?= $data['id_mapel'] ?>&id_kd=<?= $data['id_kd'] ?>">Input</a>
                                     <a class="btn btn-sm btn-warning"
-                                       href="?hal=nilai_edit&id=<?= $data['id_kelas'] ?>">Edit</a>
+                                       href="?hal=nilai_edit&id_kelas=<?= $data['id_kelas'] ?>&id_mapel=<?= $data['id_mapel'] ?>&id_kd=<?= $data['id_kd'] ?>">Edit</a>
                                     <a class="btn btn-sm btn-danger"
-                                       href="?hal=nilai_proses&id=<?= $data['id_kelas'] ?>">Proses</a>
+                                       href="?hal=nilai_proses&id_kelas=<?= $data['id_kelas'] ?>&id_mapel=<?= $data['id_mapel'] ?>&id_kd=<?= $data['id_kd'] ?>">Proses</a>
                                 </td>
                             </tr>
                         <?php } ?>
