@@ -46,14 +46,14 @@ if ($_SESSION['role']==2 or $_SESSION['role']==3){
                         </tr>
                         </thead>
                         <tbody>
-<?php
-$tampil = "SElECT * FROM view_siswa";
-$query = mysqli_query($con,$tampil);
-$no=0;
-while ($data = mysqli_fetch_array($query)) {
-//        var_dump($data);
-$no++;
-?>
+                        <?php
+                        $tampil = "SElECT * FROM view_siswa";
+                        $query = mysqli_query($con,$tampil);
+                        $no=0;
+                        while ($data = mysqli_fetch_array($query)) {
+                        //        var_dump($data);
+                        $no++;
+                        ?>
 
                         <tr>
                             <td><?= $no; ?></td>

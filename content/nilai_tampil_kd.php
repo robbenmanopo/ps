@@ -1,7 +1,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Input Nilai
+        Input Nilai per-KD
         <!--<small>advanced tables</small>-->
     </h1>
 </section>
@@ -61,6 +61,8 @@ echo "hidden";
                                     <!-- Modifikasi tombol edit dan hapus-->
                                     <a class="btn btn-sm btn-info"
                                        href="?hal=nilai_tambah&id_kelas=<?= $data['id_kelas'] ?>&id_mapel=<?= $data['id_mapel'] ?>&id_kd=<?= $data['id_kd'] ?>">Input</a>
+                                    <a class="btn btn-sm btn-primary"
+                                       href="?hal=nilai_lihat&id_kelas=<?= $data['id_kelas'] ?>&id_mapel=<?= $data['id_mapel'] ?>&id_kd=<?= $data['id_kd'] ?>">Lihat</a>
                                     <a class="btn btn-sm btn-warning"
                                        href="?hal=nilai_edit&id_kelas=<?= $data['id_kelas'] ?>&id_mapel=<?= $data['id_mapel'] ?>&id_kd=<?= $data['id_kd'] ?>">Edit</a>
                                     <a class="btn btn-sm btn-danger"

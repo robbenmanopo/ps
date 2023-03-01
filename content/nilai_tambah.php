@@ -1,7 +1,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Data Siswa
+        Input Nilai Siswa
         <!--<small>advanced tables</small>-->
     </h1>
 </section>

@@ -54,7 +54,9 @@ $halaman=[
     "user_delete",
     //menu tambahan
     "nilai_tampil_mapel",
-    "nilai_tampil_kd"
+    "nilai_tampil_kd",
+    "nilai_lihat"
+
     //
 ];
 if(isset($_GET['hal'])) $hal = $_GET['hal'];
