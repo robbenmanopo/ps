@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7bb0806e-e566-41cb-a7d3-283da765a31b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/nilai_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/nilai_edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/nilai_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/nilai_update.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +76,7 @@
       <workItem from="1677567764332" duration="11137000" />
       <workItem from="1677631073041" duration="3911000" />
       <workItem from="1677653091641" duration="15046000" />
-      <workItem from="1677717033715" duration="831000" />
+      <workItem from="1677717033715" duration="1522000" />
     </task>
     <servers />
   </component>

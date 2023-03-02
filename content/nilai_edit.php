@@ -41,6 +41,7 @@
                                 ?>
 
                                 <tr>
+                                    <input type="hidden" name="id_nilai" value="<?= $data['id_nilai'] ?>">
                                     <td><?= $no; ?></td>
                                     <td><?= $data['nis']; ?></td>
                                     <td><?= $data['nama_siswa']; ?></td>
