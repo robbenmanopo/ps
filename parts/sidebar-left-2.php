@@ -31,7 +31,14 @@
                     <li><a href="?hal=kelas_tampil"><i class="fa fa-users"></i> Data kelas</a></li>
                     <li><a href="?hal=mapel_tampil"><i class="fa fa-building"></i> Data Mata Pelajaran</a></li>
                     <li><a href="?hal=kd_tampil"><i class="fa fa-building"></i> Data KD</a></li>
-                    <li><a href="?hal=guru_tampil"><i class="fa fa-building"></i> Data Guru</a></li>
+                    <li class="
+<?php
+                    //fungsi untuk menyembunyikan tombol aksi jika rolenya operator
+                    if ($_SESSION['role']==2 or $_SESSION['role']==3 or $_SESSION['role']==4){
+                        echo "hidden";
+                    }
+                    ?>
+"><a href="?hal=guru_tampil"><i class="fa fa-building"></i> Data Guru</a></li>
                     <li><a href="?hal=siswa_tampil"><i class="fa fa-building"></i> Data Siswa</a></li>
                 </ul>
             </li>

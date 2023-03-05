@@ -3,7 +3,7 @@
 //print_r($_POST);
 include "library/config.php";
 //menampung nilai variable $_POST
-$nama_kelas = $_POST['nama_kelas'];
+$nama_kelas = htmlspecialchars($_POST['nama_kelas']);
 
 //memasukkan data ke dalam database
 $q="INSERT INTO data_kelas SET

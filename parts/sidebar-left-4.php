@@ -7,10 +7,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/manager.jpg" class="img-circle" alt="User Image">
+          <img src="dist/img/logo.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Manager</p>
+          <p>Siswa</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
@@ -21,20 +21,6 @@
             <li class="header">DAFTAR MENU</li>
             <!-- Optionally, you can add icons to the links -->
             <li><a href="?hal=dashboard"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
-            <li class="treeview">
-                <a href="#"><i class="fa fa-bookmark"></i><span>Master Data</span>
-                    <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="?hal=kelas_tampil"><i class="fa fa-users"></i> Data kelas</a></li>
-                    <li><a href="?hal=mapel_tampil"><i class="fa fa-building"></i> Data Mata Pelajaran</a></li>
-                    <li><a href="?hal=kd_tampil"><i class="fa fa-building"></i> Data KD</a></li>
-                    <li><a href="?hal=guru_tampil"><i class="fa fa-building"></i> Data Guru</a></li>
-                    <li><a href="?hal=siswa_tampil"><i class="fa fa-building"></i> Data Siswa</a></li>
-                </ul>
-            </li>
             <li><a href="?hal=nilai_tampil_mapel"><i class="fa fa-building"></i><span>Data Nilai</span></a></li>
             <li><a href="?hal=profil_tampil"><i class="fa  fa-user"></i><span>Profil</span></a></li>
         </ul>

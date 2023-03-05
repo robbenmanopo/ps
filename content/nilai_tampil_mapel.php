@@ -24,14 +24,7 @@
                             <th>No</th>
                             <th>Mata Pelajaran</th>
                             <th>Kelas</th>
-                            <th class="
-<?php
-//fungsi untuk menyembunyikan tombol aksi jika rolenya operator
-if ($_SESSION['role']==3){
-    echo "hidden";
-}
-?>
-">Aksi</th>
+                            <th>Aksi</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -48,14 +41,7 @@ if ($_SESSION['role']==3){
                                 <td><?= $no; ?></td>
                                 <td><?= $data['nama_mapel']; ?></td>
                                 <td><?= $data['nama_kelas']; ?></td>
-                                <td class="
-<?php
-//fungsi untuk menyembunyikan tombol aksi jika rolenya operator
-if ($_SESSION['role']==3){
-echo "hidden";
-}
-?>
-">
+                                <td>
                                     <!-- Modifikasi tombol edit dan hapus-->
                                     <a class="btn btn-sm btn-success"
                                        href="?hal=nilai_tampil_kd&id=<?= $data['id_mapel'] ?>">Detail</a>

@@ -41,16 +41,16 @@
                                 ?>
 
                                 <tr>
-                                    <input type="hidden" name="id_nilai" value="<?= $data['id_nilai'] ?>">
+                                    <input type="hidden" name="id_nilai[]" value="<?= $data['id_nilai'] ?>">
                                     <td><?= $no; ?></td>
                                     <td><?= $data['nis']; ?></td>
                                     <td><?= $data['nama_siswa']; ?></td>
                                     <td>
-                                        <input type="number" class="form-control" value="<?= $data['n_tugas']; ?>">
+                                        <input type="number" name="n_tugas[]" class="form-control" value="<?= $data['n_tugas']; ?>">
                                     </td>
-                                    <td><input type="number" class="form-control" value="<?= $data['n_harian']; ?>"></td>
-                                    <td><input type="number" class="form-control" value="<?= $data['n_uts']; ?>"></td>
-                                    <td><input type="number" class="form-control" value="<?= $data['n_uas']; ?>"></td>
+                                    <td><input type="number" name="n_harian[]" class="form-control" value="<?= $data['n_harian']; ?>"></td>
+                                    <td><input type="number" name="n_uts[]" class="form-control" value="<?= $data['n_uts']; ?>"></td>
+                                    <td><input type="number" name="n_uas[]" class="form-control" value="<?= $data['n_uas']; ?>"></td>
 
 
                                 </tr>

@@ -1,7 +1,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Input Nilai per-KD
+        Input Nilai Per Kompetensi Dasar
         <!--<small>advanced tables</small>-->
     </h1>
 </section>
@@ -25,14 +25,7 @@
                             <th>Mata Pelajaran</th>
                             <th>Kode Kompetensi Dasar</th>
                             <th>Deskripsi</th>
-                            <th class="
-<?php
-//fungsi untuk menyembunyikan tombol aksi jika rolenya operator
-if ($_SESSION['role']==3){
-    echo "hidden";
-}
-?>
-">Aksi Nilai</th>
+                            <th >Aksi Nilai</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -50,22 +43,36 @@ if ($_SESSION['role']==3){
                                 <td><?= $data['nama_mapel']; ?></td>
                                 <td><?= $data['kode_kd']; ?></td>
                                 <td><?= $data['deskripsi']; ?></td>
-                                <td class="
+                                <td >
+                                    <!-- Modifikasi tombol edit dan hapus-->
+                                    <a class="btn btn-sm btn-info
 <?php
 //fungsi untuk menyembunyikan tombol aksi jika rolenya operator
 if ($_SESSION['role']==3){
-echo "hidden";
+    echo "hidden";
 }
 ?>
-">
-                                    <!-- Modifikasi tombol edit dan hapus-->
-                                    <a class="btn btn-sm btn-info"
+"
                                        href="?hal=nilai_tambah&id_kelas=<?= $data['id_kelas'] ?>&id_mapel=<?= $data['id_mapel'] ?>&id_kd=<?= $data['id_kd'] ?>">Input</a>
                                     <a class="btn btn-sm btn-primary"
                                        href="?hal=nilai_lihat&id_kelas=<?= $data['id_kelas'] ?>&id_mapel=<?= $data['id_mapel'] ?>&id_kd=<?= $data['id_kd'] ?>">Lihat</a>
-                                    <a class="btn btn-sm btn-warning"
+                                    <a class="btn btn-sm btn-warning
+<?php
+//fungsi untuk menyembunyikan tombol aksi jika rolenya operator
+if ($_SESSION['role']==3){
+    echo "hidden";
+}
+?>
+"
                                        href="?hal=nilai_edit&id_kelas=<?= $data['id_kelas'] ?>&id_mapel=<?= $data['id_mapel'] ?>&id_kd=<?= $data['id_kd'] ?>">Edit</a>
-                                    <a class="btn btn-sm btn-danger"
+                                    <a class="btn btn-sm btn-danger
+<?php
+//fungsi untuk menyembunyikan tombol aksi jika rolenya operator
+if ($_SESSION['role']==3){
+    echo "hidden";
+}
+?>
+"
                                        href="?hal=nilai_proses&id_kelas=<?= $data['id_kelas'] ?>&id_mapel=<?= $data['id_mapel'] ?>&id_kd=<?= $data['id_kd'] ?>">Proses</a>
                                 </td>
                             </tr>

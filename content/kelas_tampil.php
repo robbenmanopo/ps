@@ -13,7 +13,14 @@
 
             <div class="box">
                 <div class="box-header">
-                    <a class="btn btn-md btn-primary" href="?hal=kelas_tambah">Tambah</a>
+                    <a class="btn btn-md btn-primary
+<?php
+                    //fungsi untuk menyembunyikan tombol aksi jika rolenya operator
+                    if ($_SESSION['role']==2 or $_SESSION['role']==3 or $_SESSION['role']==4){
+                        echo "hidden";
+                    }
+                    ?>
+" href="?hal=kelas_tambah">Tambah</a>
                     <!--<h3 class="box-title">Data Table With Full Features</h3>-->
                 </div>
                 <!-- /.box-header -->
