@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bb0806e-e566-41cb-a7d3-283da765a31b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ceklogincoba.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parts/sidebar-left-4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/nilai_proses.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/kelas_insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/kelas_insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/kelas_tampil.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/kelas_tampil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/mapel_tampil.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/mapel_tampil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/nilai_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/nilai_edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/nilai_tampil_kd.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/nilai_tampil_kd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/nilai_tampil_mapel.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/nilai_tampil_mapel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/nilai_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/nilai_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parts/sidebar-left-2.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/sidebar-left-2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parts/sidebar-left-3.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/sidebar-left-3.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,20 +29,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/laragon/www/ps/parts",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/ps/parts&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\ps\parts" />
@@ -88,6 +80,7 @@
       <workItem from="1677653091641" duration="15046000" />
       <workItem from="1677717033715" duration="4741000" />
       <workItem from="1677982667122" duration="10694000" />
+      <workItem from="1678000342907" duration="1596000" />
     </task>
     <servers />
   </component>

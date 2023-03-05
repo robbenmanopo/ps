@@ -45,6 +45,15 @@
                                     <!-- Modifikasi tombol edit dan hapus-->
                                     <a class="btn btn-sm btn-success"
                                        href="?hal=nilai_tampil_kd&id=<?= $data['id_mapel'] ?>">Detail</a>
+                                    <a class="btn btn-sm btn-danger
+<?php
+//fungsi untuk menyembunyikan tombol aksi jika rolenya operator
+if ($_SESSION['role']==3){
+    echo "hidden";
+}
+?>
+"
+                                       href="?hal=nilai_proses&id_kelas=<?= $data['id_kelas'] ?>&id_mapel=<?= $data['id_mapel'] ?>">Proses</a>
                                 </td>
                             </tr>
                         <?php } ?>

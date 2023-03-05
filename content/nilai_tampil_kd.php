@@ -65,15 +65,6 @@ if ($_SESSION['role']==3){
 ?>
 "
                                        href="?hal=nilai_edit&id_kelas=<?= $data['id_kelas'] ?>&id_mapel=<?= $data['id_mapel'] ?>&id_kd=<?= $data['id_kd'] ?>">Edit</a>
-                                    <a class="btn btn-sm btn-danger
-<?php
-//fungsi untuk menyembunyikan tombol aksi jika rolenya operator
-if ($_SESSION['role']==3){
-    echo "hidden";
-}
-?>
-"
-                                       href="?hal=nilai_proses&id_kelas=<?= $data['id_kelas'] ?>&id_mapel=<?= $data['id_mapel'] ?>&id_kd=<?= $data['id_kd'] ?>">Proses</a>
                                 </td>
                             </tr>
                         <?php } ?>
