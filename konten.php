@@ -55,7 +55,8 @@ $halaman=[
     //menu tambahan
     "nilai_tampil_mapel",
     "nilai_tampil_kd",
-    "nilai_lihat"
+    "nilai_lihat",
+    "nilai_proses"
 
     //
 ];
