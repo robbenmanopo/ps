@@ -35,22 +35,13 @@ $data= array();
 while ($row = mysqli_fetch_array($ids)){
     $data[] = $row;
 }
-?>
-<pre>
-    <?php
-    print_r ($data);
-    ?>
-</pre>
 
-
-
-<?php
 
 //===================================
 //query mencari nilai akhir dan memasukkan ke dalam variabel $data_nilai_akhir
 //===================================
 
-foreach($data as $data => $row){
+foreach($data as $data_id_siswa => $row){
     $q="SELECT ((avg(n_harian) * 2)+ avg(n_uts) + avg(n_uas)) / 4 from data_nilai where id_mapel=$id_mapel and id_siswa=$row[0]";
 $na=mysqli_query($con,$q);
 $nilai_akhir=array();
@@ -66,30 +57,50 @@ while ($dna= mysqli_fetch_row($na)){
 
 
 }
-?>
-<pre>
-    <?php
-    print_r ($data_nilai_akhir);
-    ?>
-</pre>
 
-<?php
 
 //melakukan perulangan untuk insert data
 $sql="INSERT INTO data_nilai_akhir (id_siswa, id_mapel, nilai_akhir) VALUES";
-
- foreach($data AS $data) {
+$u=0;
+ foreach($data AS $id) {
 //      $data[]="('".$_POST['id_siswa'][$i]."','".$_POST['id_mapel'][$i]."','".
 //      $_POST['id_kd'][$i]."','".$_POST['n_tugas'][$i]."','".$_POST['n_harian'][$i]."','".$_POST['n_uts'][$i]."','".$_POST['n_uas'][$i]."')";
 
-    //   $sql .= "('".$data[$i][$0]."','".$id_mapel."','".$data_nilai_akhir[$i][0]."')";
-      echo $data[$id][0];
-      echo $id_mapel;
-      echo $data_nilai_akhir[$i][0];
+      $sql .= "(".$id['id_siswa'].",".$id_mapel.",".floor($data_nilai_akhir[$u][0])."),";
+      
+    //   echo $id['id_siswa'];
+    //   echo "<br>";
+    //   echo $id_mapel;
+    //   echo "<br>";
+    //   echo $data_nilai_akhir[$u][0];
+      $u++;
   }
-// $sql = rtrim($sql, ',');
 
+$sql = rtrim($sql, ',');
+// echo $sql;
 
+$proses_nilai=mysqli_query($con,$sql);
+
+//membuat status nilai bernilai 1(sudah di proses)
+// $query_status="UPDATE data_nilai SET status_nilai=1 WHERE id_mapel=$id_mapel";
+$query_status="UPDATE mapel SET status_nilai=1 WHERE id_mapel=$id_mapel";
+
+$proses_status=mysqli_query($con,$query_status);
+
+//allert status nilai
+if ($proses_nilai=true and $proses_status=true){
+    // mod : menambah alert jika query berhasil
+        echo "<script>
+        window.alert('Alhamdulillah, Nilai Akhir berhasil di proses');
+        window.location.href='?hal=nilai_tampil_mapel';
+        </script>";
+    } else {
+    // mod : menambah alert jika query gagal
+        echo "<script>
+        window.alert('Maaf, Nilai Akhir gagal diproses.\nSilahkan Ulangi kembali atau Hubungi Admin.');
+        window.location.href='?hal=nilai_tampil_mapel';
+        </script>";
+    }
 // $q="SELECT ((avg(n_harian) * 2)+ avg(n_uts) + avg(n_uas)) / 4
 //     FROM data_nilai WHERE $i[$id_kelas], $i[$id_mapel]";
 
@@ -97,6 +108,12 @@ $sql="INSERT INTO data_nilai_akhir (id_siswa, id_mapel, nilai_akhir) VALUES";
 // nilai_akhir="$nilai_akhir"
 // ";
 
+// if($saldo_awal - $nominal<= 10000){
+//     echo "<script>
+//     window.alert('Maaf , Penarikan gagal!\\nSisa saldo minimal adalah Rp. 10.000,-');
+//     window.location.href='?hal=nasabah_tampil';
+//     </script>";
+// } else{
 
 
 ?>

@@ -24,12 +24,21 @@
                             <th>No</th>
                             <th>Mata Pelajaran</th>
                             <th>Kelas</th>
+                            <th>Status</th>
                             <th>Aksi</th>
                         </tr>
                         </thead>
                         <tbody>
                         <?php
-                        $tampil = "SElECT * FROM view_mapel_guru WHERE nik='$_SESSION[nik]'";
+                        switch($_SESSION['role']){
+                            case 1:
+                                $tampil = "SElECT * FROM mapel JOIN data_kelas USING(id_kelas)";
+                                break;
+                            case 2:
+                                $tampil = "SElECT * FROM view_mapel_proses WHERE nik='$_SESSION[nik]'";
+                                break;
+                        }
+                        // $tampil = "SElECT * FROM view_mapel_proses WHERE nik='$_SESSION[nik]'";
                         $query = mysqli_query($con,$tampil);
                         $no=0;
                         while ($data = mysqli_fetch_array($query)) {
@@ -42,6 +51,19 @@
                                 <td><?= $data['nama_mapel']; ?></td>
                                 <td><?= $data['nama_kelas']; ?></td>
                                 <td>
+                                    
+<?php
+// merubah warna status nilai mapel
+if($data['status_nilai']==1){
+    echo "<p class='badge bg-aqua'>Sudah diproses</p>";
+}elseif($data['status_nilai']==0){
+    echo "<p class='badge bg-yellow'>Belum diproses</p>";
+}
+
+?>    
+                                </td>
+                                
+                                <td>
                                     <!-- Modifikasi tombol edit dan hapus-->
                                     <a class="btn btn-sm btn-success"
                                        href="?hal=nilai_tampil_kd&id=<?= $data['id_mapel'] ?>">Detail</a>
@@ -51,8 +73,12 @@
 if ($_SESSION['role']==3){
     echo "hidden";
 }
+if($data['status_nilai']==1){
+    echo " disabled";
+}
 ?>
 "
+
                                        href="?hal=nilai_proses&id_kelas=<?= $data['id_kelas'] ?>&id_mapel=<?= $data['id_mapel'] ?>">Proses</a>
                                 </td>
                             </tr>
