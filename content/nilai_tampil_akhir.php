@@ -1,9 +1,11 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
+    <center>
     <h1>
-        Data Guru
+        Data Nilai Siswa
         <!--<small>advanced tables</small>-->
     </h1>
+    </center>
 </section>
 
 <!-- Main content -->
@@ -13,7 +15,7 @@
 
             <div class="box">
                 <div class="box-header">
-                    <a class="btn btn-md btn-primary" href="?hal=guru_tambah">Tambah</a>
+                    <!--<a class="btn btn-md btn-primary" href="?hal=nilai_tambah">Tambah</a>-->
                     <!--<h3 class="box-title">Data Table With Full Features</h3>-->
                 </div>
                 <!-- /.box-header -->
@@ -22,24 +24,28 @@
                         <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Guru</th>
-                            <th>NIK</th>
-                            <th>Jenis Kelamin</th>
                             <th>Mata Pelajaran</th>
-                            <th>Kelas</th>
-                            <th class="
-<?php
-//fungsi untuk menyembunyikan tombol aksi jika rolenya operator
-if ($_SESSION['role']==2 or $_SESSION['role']==3){
-    echo "hidden";
-}
-?>
-">Aksi</th>
+                            <th>Nilai Akhir</th>
                         </tr>
                         </thead>
                         <tbody>
                         <?php
-                        $tampil = "SElECT * FROM view_mapel_guru";
+                        switch($_SESSION['role']){
+                            case 1:
+                                $tampil = "SELECT * FROM mapel JOIN data_kelas USING(id_kelas)";
+                                break;
+                            case 2:
+                                $tampil = "SELECT * FROM view_mapel_proses WHERE nik='$_SESSION[nik]'";
+                                break;
+                            case 3:
+                                $tampil = "SELECT * FROM view_mapel_proses WHERE nik='$_SESSION[nik]'";
+                                break;
+                            case 4:
+                                $tampil = "SELECT * FROM data_nilai_akhir JOIN mapel USING(id_mapel) WHERE id_kelas='$_SESSION[id_kelas]' and id_siswa='$_SESSION[id_siswa]'";
+                                break;
+
+                        }
+                        // $tampil = "SElECT * FROM view_mapel_proses WHERE nik='$_SESSION[nik]'";
                         $query = mysqli_query($con,$tampil);
                         $no=0;
                         while ($data = mysqli_fetch_array($query)) {
@@ -49,25 +55,8 @@ if ($_SESSION['role']==2 or $_SESSION['role']==3){
 
                             <tr>
                                 <td><?= $no; ?></td>
-                                <td><?= $data['nama_guru']; ?></td>
-                                <td><?= $data['nik']; ?></td>
-                                <td><?= $data['jk']; ?></td>
                                 <td><?= $data['nama_mapel']; ?></td>
-                                <td><?= $data['nama_kelas']; ?></td>
-                                <td class="
-<?php
-//fungsi untuk menyembunyikan tombol aksi jika rolenya operator
-if ($_SESSION['role']==2 or $_SESSION['role']==3){
-    echo "hidden";
-}
-?>
-">
-                                    <!-- Modifikasi tombol edit dan hapus-->
-                                    <a class="btn btn-sm btn-warning"
-                                       href="?hal=guru_edit&id=<?= $data['id_guru'] ?>"> Edit </a>
-                                    <a class="btn btn-sm btn-danger"
-                                       href="?hal=guru_delete&id=<?= $data['id_guru'] ?>"> Hapus </a>
-                                </td>
+                                <td><?= $data['nilai_akhir']; ?></td>
                             </tr>
                         <?php } ?>
                         </tbody>

@@ -56,7 +56,9 @@ $halaman=[
     "nilai_tampil_mapel",
     "nilai_tampil_kd",
     "nilai_lihat",
-    "nilai_proses"
+    "nilai_proses",
+    "nilai_tampil_akhir",
+    "nilai_reset"
 
     //
 ];

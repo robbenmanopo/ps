@@ -2,6 +2,7 @@
 
 //menampung nilai variable $_POST
 $nama_guru = $_POST['nama_guru'];
+$nik = $_POST['nik'];
 $jk = $_POST['jk'];
 $id_mapel = $_POST['id_mapel'];
 $username = $_POST['username'];
@@ -11,6 +12,7 @@ $id_role = 2;
 //memasukkan data ke dalam database
 $q="INSERT INTO data_guru SET
 nama_guru='$nama_guru',
+nik='$nik',
 jk='$jk',
 id_mapel='$id_mapel',
 username='$username',

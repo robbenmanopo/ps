@@ -3,6 +3,7 @@
 include "library/config.php";
 //menampung nilai variable $_POST
 $nama_guru = $_POST['nama_guru'];
+$nik = $_POST['nik'];
 $jk = $_POST['jk'];
 $id_mapel = $_POST['id_mapel'];
 $username = $_POST['username'];
@@ -12,6 +13,7 @@ $id_guru= $_POST['id_guru'];
 //memasukkan data ke dalam database
 $q="UPDATE data_guru SET
 nama_guru='$nama_guru',
+nik='$nik',
 jk='$jk',
 id_mapel='$id_mapel',
 username='$username',

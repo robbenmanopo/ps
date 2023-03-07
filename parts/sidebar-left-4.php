@@ -21,8 +21,7 @@
             <li class="header">DAFTAR MENU</li>
             <!-- Optionally, you can add icons to the links -->
             <li><a href="?hal=dashboard"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
-            <li><a href="?hal=nilai_tampil_mapel"><i class="fa fa-building"></i><span>Data Nilai</span></a></li>
-            <li><a href="?hal=profil_tampil"><i class="fa  fa-user"></i><span>Profil</span></a></li>
+            <li><a href="?hal=nilai_tampil_akhir"><i class="fa fa-building"></i><span>Data Nilai</span></a></li>
         </ul>
 
       <!-- /.sidebar-menu -->

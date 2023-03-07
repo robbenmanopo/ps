@@ -19,6 +19,10 @@
                             <input type="text" class="form-control" name="nama_guru" id="nama_guru" placeholder="Nama Guru" required>
                         </div>
                         <div class="form-group">
+                            <label for="nik">Nik</label>
+                            <input type="text" class="form-control" name="nik" id="nik" placeholder="nik" required>
+                        </div>
+                        <div class="form-group">
                             <label for="mapel">Jenis Kelamin</label>
                             <div class="radio">
                                 <label>

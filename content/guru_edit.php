@@ -26,6 +26,10 @@ $data = mysqli_fetch_array($query);
                             <label for="nama_guru">Nama Guru</label>
                             <input type="text" class="form-control" name="nama_guru" id="nama_guru" placeholder="Nama Guru" value="<?= $data['nama_guru'] ?>" required>
                         </div>
+                        <div class="form-group">
+                                <label for="nik">NIK</label>
+                                <input type="text" class="form-control" name="nik" id="nik" placeholder="NIK" value="<?= $data['nik'] ?>" required>
+                        </div>
                         <!-- Input jk -->
                         <div class="form-group">
                             <label for="jk">Jenis Kelamin</label>

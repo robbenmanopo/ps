@@ -10,7 +10,6 @@
 <section class="content">
     <div class="row">
         <div class="col-xs-12">
-
             <div class="box">
                 <div class="box-header">
                     <!--<a class="btn btn-md btn-primary" href="?hal=nilai_tambah">Tambah</a>-->
@@ -70,7 +69,7 @@ if($data['status_nilai']==1){
                                     <a class="btn btn-sm btn-danger
 <?php
 //fungsi untuk menyembunyikan tombol aksi jika rolenya operator
-if ($_SESSION['role']==3){
+if ($_SESSION['role']==3 or $_SESSION['role']==4){
     echo "hidden";
 }
 if($data['status_nilai']==1){
@@ -80,6 +79,17 @@ if($data['status_nilai']==1){
 "
 
                                        href="?hal=nilai_proses&id_kelas=<?= $data['id_kelas'] ?>&id_mapel=<?= $data['id_mapel'] ?>">Proses</a>
+                                       <a class="btn btn-sm btn-primary"
+                                       href="?hal=nilai_tampil_akhir&id=<?= $data['id_mapel'] ?>">Nilai Akhir</a>
+                                       <a class="btn btn-sm btn-warning
+<?php
+//fungsi untuk menyembunyikan tombol aksi jika rolenya operator
+if ($_SESSION['role']==2 or $_SESSION['role']==3 or $_SESSION['role']==4){
+    echo "hidden";
+}
+?>
+"
+                                       href="?hal=nilai_reset&id=<?= $data['id_mapel'] ?>">Reset</a>
                                 </td>
                             </tr>
                         <?php } ?>

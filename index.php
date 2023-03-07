@@ -63,6 +63,10 @@ switch ($_SESSION['role']) {
     case 3: //manager
         include "parts/sidebar-left-3.php";
         break;
+    case 4: //siswa
+        include "parts/sidebar-left-4.php";
+        break;
+
 }
 ?>
 
