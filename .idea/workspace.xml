@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bb0806e-e566-41cb-a7d3-283da765a31b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/content/nilai_proses.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/nilai_tampil_kd.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/nilai_tampil_kd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/nilai_tampil_mapel.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/nilai_tampil_mapel.php" afterDir="false" />
-    </list>
+    <list default="true" id="7bb0806e-e566-41cb-a7d3-283da765a31b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,6 +76,7 @@
       <workItem from="1677717033715" duration="4741000" />
       <workItem from="1677982667122" duration="10694000" />
       <workItem from="1678000342907" duration="1596000" />
+      <workItem from="1678204779160" duration="28000" />
     </task>
     <servers />
   </component>
